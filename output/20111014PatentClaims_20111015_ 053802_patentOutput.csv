@@ -1,0 +1,35 @@
+5802043,ATM(3)
+5878228
+6014707
+6026375
+6037937
+6088225
+6112015,OSI(33)
+6115646,GPAE(6),ORB(3),CORBA(4),WPDL(1)
+6192397
+6198558,HDT(42),ONU(43),LIU(31),DSP(29),RAM(4),OAM(2),SONET(1),PCM(6),ATM(4)
+6202208,JVM(20)
+6271835
+6298057,ITU(4)
+6310610
+6340979
+6594822,RAM(3),ROM(3)
+6631368
+6633564,MPEG(1),PUSI(2),ATM(1),AAL(1),OSF(5)
+6691282
+7092934,HTML(8),URL(20),ULR(1)
+7127526,MIB(4),URL(4),HTTP(2),API(2),CPU(2)
+7308279
+7339892
+
+WPDL, Coalition) process definition language
+HDT, host digital terminal
+ONU, optical network unit
+PCM, pulse code modulation
+LIU, line interface unit
+MPEG, motion picture experts group
+PUSI, payload unit start indicator
+ATM, asynchronous transfer mode
+OSF, an offset field
+HTML, a hypertext markup language
+URL, uniform resource locator

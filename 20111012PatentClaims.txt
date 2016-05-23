@@ -1,0 +1,1855 @@
+PatentNumber=7634023,What is claimed is:
+
+
+
+1. A method of a priori conditioning of a communication signal having a plurality of channels, the method comprising: digitally filtering a first processed data signal transmitted over one of the plurality of channels; monitoring, with an interference response signal generator unit, the remaining plurality of channels to estimate channel response signals resulting from the digital filtering of the first processed data signal over the one of the plurality of channels; generating, with the interference response signal generator unit, interference response signals based at least in part on the channel response signals, the interference response signals corresponding to at least a subset of the plurality of channels; and modulating, with a correlation canceller unit, a second processed data signal by the interference response signals to produce the communication signal.
+
+
+
+2. The method of claim 1, wherein the generating interference response signals step comprises inverting the estimated channel response signals to obtain the interference response signals corresponding to the plurality of channels.
+
+
+
+3. The method of claim 2, wherein the inverting of the estimated channel response signals to obtain interference response signals comprises multiplying each channel response signal by a negative value.
+
+
+
+4. The method of claim 1, wherein the digital filtering of the first processed data signal comprises digital filtering of a known data signal comprising a test tone.
+
+
+
+5. The method of claim 1, further comprising: transmitting at least one of a known in-phase or quadrature data signal over the one of the plurality of channels in the first processed data signal.
+
+
+
+6. The method of claim 1, wherein, the monitoring step is performed over an epoch aperture; and the interference response signals are based on the channel response signals monitored over the epoch aperture.
+
+
+
+7. The method of claim 1, further comprising: estimating additional channel response signals resulting from digital filtering of additional processed data signals over each of the remaining plurality of channels; generating additional interference response signals based at least in part on the additional channel response signals, the additional interference response signals corresponding to the plurality of channels; and combining the interference response signals with the additional interference response signals, wherein the modulating the second processed data signal by the interference response signals comprises modulating the second processed data signal by the combined signals.
+
+
+
+8. The method of claim 1, further comprising: digitally filtering the modulated second processed data signal; monitoring the remaining plurality of channels to estimate channel response signals resulting from the digital filtering of the modulated second processed data signal; and updating the generated interference response signals based on the estimated channel response signals resulting from the digital filtering of the modulated second processed data signal.
+
+
+
+9. The method of claim 1, wherein, the digital filtering step is performed with a finite impulse response (FIR) filter; the generating step and the modulating step are performed using at least one of a field programmable gate array (FPGA) or an application specific integrated circuit (ASIC); the communication signal comprises an orthogonal frequency digitally multiplexed (OFDM) signal; and the channel response signals comprise complex values.
+
+
+
+10. A device for a priori conditioning of a communication signal having a plurality of channels, comprising: interference response signal generation processing circuitry operable to: monitor the plurality of channels to obtain channel response signals comprising an estimate of a digital filter transfer function resulting from digital filtering of a known data signal; and generate interference response signals based on the channel response signals, the interference response signals corresponding to the plurality of channels; channel modulator processing circuitry operable to modulate received data over a plurality of channels to generate a processed data signal having a corresponding plurality of communication channels; correlation canceller processing circuitry operable to modulate the processed data signal over the plurality of channels with the interference response signals the correlation canceller unit modulation generating an inversely correlated data signal; and digital filter processing circuitry operable to filter the inversely correlated data signal to generate a filtered communication signal.
+
+
+
+11. The device of claim 10 wherein the interference response signal generation processing circuitry is configured to generate the interference response signals by inverting the channel response signals.
+
+
+
+12. The device of claim 10 wherein the digital filter processing circuitry is further configured to digitally filter the known data signal comprising a test tone to generate the channel response signals.
+
+
+
+13. The device of claim 10, wherein the estimate of a digital filter transfer function is calculated by separately evaluating in-phase and quadrature data signals comprising real values.
+
+
+
+14. The device of claim 10, further comprising: carrier modulator processing circuitry operable to modulate the inversely correlated data signal before the digital filter operates to filter the inversely correlated data signal.
+
+
+
+15. The device of claim 10, wherein, the digital filter processing circuitry comprises a finite impulse response (FIR) filter; the device comprises at least one of a field programmable gate array (FPGA) or an application specific integrated circuit (ASIC); and the communication signal comprises an orthogonal frequency digitally multiplexed (OFDM) signal.
+
+
+
+16. A method of a priori conditioning of a communication signal having a plurality of channels, the method comprising: receiving a data signal; modulating, with a modulator unit, the data signal over the plurality of channels to generate a processed data signal having corresponding plurality of communication channels; modulating, with a correlation canceller unit, the processed data signal over the plurality of channels with interference response signals comprising an inverse of a digital filter transfer function to generate an inversely correlated data signal; and digitally filtering, with a digital filter unit, the inversely correlated data signal according to the digital filter transfer function to generate the communication signal.
+
+
+
+17. The method of claim 16, further comprising: monitoring the plurality of channels to obtain channel response signals resulting from digital filtering of a known data signal; and generating the interference response signals based on the channel response signals, the interference response signals corresponding to the plurality of channels.
+
+
+
+18. The method of claim 17, further comprising: digitally filtering the known data signal to generate channel response signals, wherein the known data signal comprises a test tone.
+
+
+
+19. The method of claim 17, further comprising: generating the interference response signals by inverting the channel response signals.
+
+
+
+20. The method of claim 16, further comprising: estimating the digital filter transfer function by separately evaluating in-phase and quadrature data signals.
+
+
+
+21. The method of claim 16, further comprising: modulating the inversely correlated data signal with a carrier modulator unit before the digital filter unit operates to filter the inversely correlated data signal.
+
+
+
+22. A method of generating interference response signals for a priori conditioning of a communication signal having a plurality of channels, the method comprising: monitoring, with an interference response signal generator unit, a first subset of the plurality of channels to identify interference data comprising channel response signals resulting from a digital filtering of a known data signal over a first one of the plurality of channels; performing, with an interference response signal generator unit, an inversion operation on the identified interference data to generate a set of corresponding interference response signals; and modulating, with a correlation canceller unit, a processed data signal by the interference response signals to produce the communication signal.
+
+
+
+23. The method of claim 22, further comprising: modulating a received data signal over the plurality of channels to generate processed data signal having a corresponding plurality of communication channels.
+
+
+PatentNumber=7656958,We claim:
+
+
+
+1. A method of estimating a channel in a communication system, the method comprising: receiving at least two blocks of symbols using at least two corresponding antennas and at least two corresponding radio frequency front-end circuits; estimating a channel for individual blocks of the at least two blocks using at least one of the symbols of an individual block to thereby generate at least one corresponding channel estimate; selecting a block of symbols from the at least two blocks of symbols; choosing a group of symbols from the selected block of symbols; compensating the chosen group of symbols using a corresponding channel estimate from the at least one corresponding channel estimate; and re-estimating the channel using the group of compensated symbols and the at least one of the symbols.
+
+
+
+2. The method of claim 1, further comprising either: repeating the steps of selecting a block, choosing a group of symbols, compensating the group of symbols, and re-estimating the channel, or using a latest channel estimate to compensate all symbols within the selected block.
+
+
+
+3. The method of claim 1, wherein the at least one of the symbols of the selected block of symbols is a pilot symbol.
+
+
+
+4. The method of claim 1, wherein the compensating includes at least one of diversity combining and beam forming.
+
+
+
+5. The method, as recited in claim 1, further comprising: recovering a transmitted block of symbols at least partially based on each block of symbols of the at least two blocks of symbols received from the at least two antennas.
+
+
+
+6. The method of claim 1, further comprising: repeating a predetermined number of times, the steps of selecting a block, choosing a group of symbols, compensating the group of symbols, and re-estimating the channel.
+
+
+
+7. The method of claim 1, further comprising: using a latest channel estimate to compensate all symbols within the selected block.
+
+
+
+8. The method of claim 1, wherein the estimating, selecting, choosing, compensating, and re-estimating are performed by a wireless receiver.
+
+
+
+9. The method of claim 1, wherein the at least one corresponding channel estimate includes at least one corresponding signal representative of the channel of the communication system.
+
+
+
+10. A transceiver configured to estimate a channel in a communication system, the transceiver comprising: a receiver portion for receiving a block of "n" transmitted symbols, the symbols including pilot symbols and "d" data symbols; an estimator for estimating a channel using the pilot symbols; a processor for choosing a group of "m" strongest symbols from the "d" received data symbols, and for compensating the group of "m" strongest symbols using the channel estimate to create a group of "m" compensated symbols; and wherein the estimator re-estimates the channel using the group of "m" compensated symbols and pilot symbols, and either: the processor repeats choosing the group of "m" strongest symbols, and compensates the group of "m" strongest symbols to re-estimate the channel; or the processor uses a latest channel estimate to compensate all symbols within the block, wherein "n," "d," and "m" are integers.
+
+
+
+11. The transceiver, as recited in claim 10, wherein "m" equals "d."
+
+
+
+12. The transceiver, as recited in claim 10, wherein "m" is less than "d.
+
+
+
+13. A system comprising: a first receiver portion configured to receive a first block of received symbols; at least a second receiver portion configured to receive a second block of received symbols; a first estimator portion configured to generate a first initial channel estimate based on a demodulated version of the first block of received symbols; a second estimator portion configured to generate a second initial channel estimate based on a demodulated version of the second block of received symbols; a symbol selector configured to choose a selected block of symbols from the demodulated versions of the first and second blocks of received symbols and configured to choose selected data symbols from the selected block of symbols; and a symbol compensator configured to compensate the demodulated versions of the first and second sets of symbols and to compensate the selected data symbols from the selected block of symbols at least partially based on at least the first initial channel estimate, to thereby generate first compensated selected data symbols.
+
+
+
+14. The system, as recited in claim 13, wherein the symbol selector is configured to choose selected data symbols from another of the blocks of symbols corresponding to the selected data symbols from the selected block of symbols and the symbol compensator is configured to compensate the selected data symbols from the other of the blocks of symbols, to thereby generate compensated symbols.
+
+
+
+15. The system, as recited in claim 14, further comprising: a channel reestimator configured to generate a channel estimation at least partially based on the compensated signals.
+
+
+
+16. The system, as recited in claim 15, further comprising: a data symbol compensator configured to compensate delayed, demodulated versions of the first and second blocks of received symbols at least partially based on the channel estimation.
+
+
+
+17. The system, as recited in claim 13, wherein the symbol compensator is configured to generate compensated symbols from the first compensated selected data symbols.
+
+
+
+18. The system of claim 13, wherein the symbol compensator is configured to use at least one of diversity combining and beam forming.
+
+
+PatentNumber=7729281,The invention claimed is:
+
+
+
+1. A packet communication method in a multicarrier communications environment comprising: determining, by a transceiver, a packet including a header portion and a data portion; and transmitting, by the transceiver, the packet including the header portion and the data portion, wherein: the header portion indicates one or more communications parameters used for the data portion of the packet, and the data portion is used for communication of a number of data bytes at a data rate, and wherein: the header portion includes a legacy header portion, which is modulated on a first multicarrier symbol, the header portion containing a Rate field indicating a legacy data rate value and a Length field indicating a legacy number of data bytes, the number of data bytes communicated in the data portion of the packet is different than the legacy number of data bytes indicated in the legacy header portion of the packet, and the data rate used in the data portion of the packet is different than the legacy data rate indicated in the legacy header portion of the packet, and wherein: the header portion includes an extended rate header portion modulated on at least one additional multicarrier symbol, the extended rate header portion includes at least one field indicating at least one actual communication parameter used for the data portion of the packet, the extended header potion is not decodable by a legacy device, and the Rate field and Length fields are used to defer transmission for a period of time at least corresponding to the duration of the packet, the packet including both the legacy header portion and the extended rate header portion.
+
+
+
+2. The method of claim 1, wherein the transceiver supports one or more of 802.11a and 802.11g.
+
+
+
+3. The method of claim 1, wherein the legacy device supports one or more of 802.11a and 802.11g.
+
+
+
+4. The method of claim 1, wherein the extended header portion indicates a bit allocation table.
+
+
+
+5. The method of claim 1, wherein the extended header portion indicates a cycle prefix length.
+
+
+
+6. The method of claim 1, wherein the extended header portion indicates a pilot tone allocation.
+
+
+
+7. The method of claim 1, wherein the Rate field and Length field are decodable by the legacy device and the data portion of the packet is not correctly decodable by the legacy device.
+
+
+
+8. The method of claim 1, wherein the Rate field and Length field are used by the legacy device to determine a duration of time.
+
+
+
+9. The method of claim 1, wherein the Rate field and Length field are used by the legacy device to set a Network Allocation Vector (NAV).
+
+
+
+10. The method of claim 1, wherein the transceiver is one or more of a general purpose computer, a special purpose computer, a programmed microprocessor, a microcontroller and peripheral integrated circuit element(s), an ASIC, a digital signal processor, a hard-wired electronic or logic circuit and a programmable logic device.
+
+
+
+11. The method of claim 1, wherein the legacy device is one or more of a general purpose computer, a special purpose computer, a programmed microprocessor, a microcontroller and peripheral integrated circuit element(s), an ASIC, a digital signal processor, a hard-wired electronic or logic circuit and a programmable logic device.
+
+
+
+12. The method of claim 1, wherein the transceiver is an access point.
+
+
+
+13. A method of packet communication in a multicarrier communications environment comprising: receiving, by a transceiver, a packet including a header portion and a data portion, wherein: the header portion indicates one or more communications parameters used for the data portion of the packet, and the data portion is used for communication of a number of data bytes at a data rate; and the header portion includes a legacy header portion, which is modulated on a first multicarrier symbol, the header portion containing a Rate field indicating a legacy data rate value and a Length field indicating a legacy number of data bytes; and decoding, by the transceiver, at least the legacy header portion, wherein: the number of data bytes communicated in the data portion of the packet is different than the legacy number of data bytes indicated in the legacy header portion of the packet, and the data rate used in the data portion of the packet is different than the legacy data rate indicated in the legacy header portion of the packet, the header portion includes an extended rate header portion modulated on at least one additional multicarrier symbol, the extended rate header portion includes at least one field indicating at least one actual communication parameter used for the data portion of the packet, the extended header potion is not decodable by a legacy device, and the Rate field and Length field are used to defer transmission for a period of time at least corresponding to the duration of the packet, the packet including both the legacy header portion and the extended rate header portion.
+
+
+
+14. The method of claim 13, wherein the transceiver supports one or more of 802.11a and 802.11g.
+
+
+
+15. The method of claim 13, wherein the legacy device supports one or more of 802.11a and 802.11g.
+
+
+
+16. The method of claim 13, wherein the extended header portion indicates a bit allocation table.
+
+
+
+17. The method of claim 13, wherein the extended header portion indicates a cycle prefix length.
+
+
+
+18. The method of claim 13, wherein the extended header portion indicates a pilot tone allocation.
+
+
+
+19. The method of claim 13, wherein the Rate field and Length field are decodable by the legacy device and the data portion of the packet is not correctly decodable by the legacy device.
+
+
+
+20. The method of claim 13, wherein the Rate field and Length field are used by the legacy device to determine a duration of time.
+
+
+
+21. The method of claim 13, wherein the Rate field and Length field are used by the legacy device to set a Network Allocation Vector (NAV).
+
+
+
+22. The method of claim 13, wherein the transceiver is one or more of a general purpose computer, a special purpose computer, a programmed microprocessor, a microcontroller and peripheral integrated circuit element(s), an ASIC, a digital signal processor, a hard-wired electronic or logic circuit and a programmable logic device.
+
+
+
+23. The method of claim 13, wherein the legacy device is one or more of a general purpose computer, a special purpose computer, a programmed microprocessor, a microcontroller and peripheral integrated circuit element(s), an ASIC, a digital signal processor, a hard-wired electronic or logic circuit and a programmable logic device.
+
+
+
+24. The method of claim 13, wherein the transceiver is an access point.
+
+
+PatentNumber=7783291,What is claimed is:
+
+
+
+1. A communication method for: receiving, demodulating and processing, in a wireless system, comprising two or more antennas, a received modulated Global Positioning System (GPS) signal, a first modulated Code Division Multiple Access (CDMA) voice signal and a first modulated Orthogonal Frequency Division Multiplex (OFDM) video signal, into demodulated, processed GPS position finding signal, first processed CDMA voice signal, and first processed OFDM video signal and for providing said processed GPS signal, said first processed CDMA voice signal and said first processed OFDM video signal to a subscriber of said wireless system, for use by said subscriber, for position finding, voice signal reception and video signal reception; processing a signal, generated by touching the screen of said wireless system, into a processed touch screen control signal for control by said subscriber of said subscriber use of said processed GPS signal, said first processed CDMA signal and said first processed OFDM video signal; processing and modulating a video signal, generated by said subscriber, into a processed second OFDM video modulated signal and providing said second modulated OFDM video signal to said two or more antennas, for transmission of said second modulated OFDM video signal, said subscriber generated second modulated OFDM video signal is a distinct video signal from said first modulated OFDM video signal; and processing and modulating a data signal, generated by said subscriber, into a processed second CDMA data modulated signal and providing said second modulated CDMA signal to an antenna for transmission of said second modulated CDMA signal.
+
+
+
+2. A communication method for: receiving, demodulating and processing, in a wireless device, comprising two or more antennas, a received modulated position finding signal, a modulated Code Division Multiple Access (CDMA) data signal and a modulated Orthogonal Frequency Division Multiplex (OFDM) video signal, into demodulated, processed position finding signal, processed CDMA data signal, and processed OFDM video signal and for providing said processed position finding signal, said processed CDMA data signal and said processed OFDM video signal to a subscriber of said wireless device, for use by said subscriber, of said processed position finding signal, said processed CDMA data signal and said processed OFDM video signal, for position finding, data signal reception and video signal reception; processing a touch screen generated signal, generated by said subscriber, into a processed touch screen control signal for control by said subscriber of said subscriber use of said processed position finding signal, said processed CDMA signal and said processed OFDM signal; and processing a signal, generated by said subscriber motion and said subscriber motion detector, by processing said subscriber motion detector generated signal into a processed motion detector generated signal and providing said processed motion detector generated signal to an OFDM processor, modulator and a transmitter for processing, modulation and transmission, in said wireless device, of said processed motion detector generated signal, said transmission controlled by said touch screen control signal.
+
+
+
+3. A communication method for: receiving, and processing a received Global Positioning System (GPS) signal and a video signal into, processed GPS position finding signal, and processed video signal and for providing said processed GPS signal and said processed video signal to a user of a cellular phone, for position finding and for video reception by said user; processing said processed video signal into processed video Orthogonal Frequency Division Multiplex (OFDM) in-phase and quadrature-phase baseband signal; processing a voice signal, generated by said user, into a processed Code Division Multiple Access (CDMA) cross-correlated in-phase and quadrature-phase processed signal; providing said processed video OFDM signal to a first quadrature modulator and first transmitter for quadrature modulation and transmission of said processed video OFDM signal; providing said processed CDMA cross-correlated signal to a second quadrature modulator and second transmitter for quadrature modulation and transmission of said CDMA cross-correlated signal; and processing a signal, generated by said user touching the screen of said cellular phone, into a processed touch screen control signal for control by said user of transmission of said processed OFDM signal and of said processed CDMA signal.
+
+
+
+4. The method of claim 1, further comprising a non-quadrature modulator for non-quadrature modulation of a voice signal in a cellular system and a processor and filter for processing and providing a processed and filtered first bit rate cross-correlated in-phase and quadrature-phase Time Division Multiple Access (TDMA) signal, further comprising reception of location finder information signals, wherein said location finder information signals are received from a cellular system and from a Global Positioning System (GPS) satellite system, and further comprising a connection for providing a control signal from a wire to said subscriber and further comprising a Multiple Input Multiple Output (MIMO) system having two or more antennas for reception and transmission and wherein said wireless system is a smart-phone.
+
+
+
+5. The method of claim 1, further comprising broadcasting of said first processed OFDM video signal to multiple computers for reception by multiple computers, and broadcasting of said first processed OFDM video signal to multiple cellular phones for reception by multiple cellular phones and further comprising a method, wherein said touch screen generated signal provides direct access to launch a browser from said screen by touching said screen.
+
+
+
+6. The method of claim 1, wherein said received first modulated OFDM video signal is used in a fourth generation (4G) wireless system and said received first modulated CDMA signal is used in a third generation (3G) wireless system and said method further comprises a second generation (2G) wireless system specified received Time Division Multiple Access (TDMA) signal, wherein said received TDMA signal is demodulated and processed into a cross-correlated in-phase and quadrature-phase baseband signal, and said method comprises a fingerprint authenticated receiver and a transmitter for transmission of video signal and said touch screen generated signal is used for remote control of three dimensional (3D) images and said method comprises a remote control device for remote control of a television (TV) set and a voice recognition system and a Software Defined Radio (SDR).
+
+
+
+7. The method of claim 1, further comprising a location finder signal received from at least two satellite transmitters and from at least two land based transmitters, wherein said received signals from satellite transmitters are received in different radio frequency bands than said signals received from land based transmitters and wherein said two satellite transmitters comprise one GPS satellite transmitter and one non GPS satellite transmitter.
+
+
+
+8. The method of claim 1, further comprising a processor for receiving and processing a received Radio Frequency Identification (RFID) signal into a processed RFID baseband signal.
+
+
+
+9. The method of claim 1, further comprising a baseband processor for receiving and processing said subscriber generated OFDM cross-correlated baseband signals and said subscriber generated cross-correlated in-phase and quadrature phase shaped and filtered Time Division Multiple Access (TDMA) signal.
+
+
+
+10. The method of claim 2, further comprising a non-quadrature modulator for non-quadrature modulation of a said subscriber generated voice processed Time Division Multiple Access (TDMA) signal and further comprising reception of location finder information signals, wherein said location finder information signals are received from a cellular system, from a Global Positioning System (GPS) satellite system and from a non-GPS satellite system, and further comprising a connection for providing a control signal from a wire to said subscriber and further comprising a Multiple Input Multiple Output (MIMO) system having two or more antennas for reception and transmission.
+
+
+
+11. The method of claim 2, further comprising broadcasting of said processed OFDM video signal to multiple devices for reception by said multiple devices.
+
+
+
+12. The method of claim 2, wherein said received modulated OFDM video signal is used in a fourth generation (4G) wireless system and said received modulated CDMA signal is used in a third generation (3G) wireless system and said method further comprises a second generation (2G) wireless system specified received Time Division Multiple Access (TDMA) signal, wherein said received TDMA signal is demodulated and processed into a cross-correlated in-phase and quadrature-phase baseband signal, and said method comprises a fingerprint authenticated receiver and a transmitter for transmission of said subscriber generated video signal and said touch screen generated signal is used for remote control of a television (TV) set and a and a Software Defined Radio (SDR) implemented signal demodulator and processor.
+
+
+
+13. The method of claim 2, further comprising a location finder signal received from at least two satellite transmitters and from at least two land based transmitters, wherein said received signals from satellite transmitters are received in different radio frequency bands than said signals received from land based transmitters and wherein said two satellite transmitters comprise one GPS satellite transmitter and one other than GPS satellite transmitter.
+
+
+
+14. The method of claim 2, further comprising a processor for receiving and processing a received Radio Frequency Identification (RFID) signal into a processed RFID baseband signal and further comprising a processor for receiving and processing a barcoded signal.
+
+
+
+15. The method of claim 2, further comprising a baseband processor for processing said subscriber generated video OFDM processed signal and said subscriber generated cross-correlated in-phase and quadrature phase shaped and filtered Time Division Multiple Access (TDMA) signal.
+
+
+
+16. The method of claim 3, further comprising a polar modulator for non-quadrature modulation of said user generated voice signal, further comprising reception of location finder information signals, wherein said location finder information signals are received from a cellular system and from a Global Positioning System (GPS) satellite system.
+
+
+
+17. The system of claim 3, further comprising a signal processor for processing barcode reader provided signal and a processor for processing said user touch screen generated remote control signals.
+
+
+
+18. The system of claim 3, wherein said processed video OFDM signal is used in a fourth generation (4G) wireless system and further comprising a receiver for reception of a GSM received signal, wherein said received GSM signal is demodulated and processed into a cross-correlated in-phase and quadrature-phase baseband signal.
+
+
+
+19. The method of claim 3, further comprising a Multiple Input Multiple Output (MIMO) antenna system having two or more antennas for reception and transmission.
+
+
+
+20. The method of claim 3, further comprising a Software Defined Radio (SDR) implementation of said cellular phone and wherein said cellular phone is a smart-phone.
+
+
+PatentNumber=7804765,What is claimed is:
+
+
+
+1. A non-transitory computer-readable information storage media comprising stored instructions for multicarrier communication in a packet-based network, that, if executed, operate to cause: transmission or reception of a first packet using a first cyclic prefix length for a data portion of the first packet; and transmission or reception of a second packet using a second cyclic prefix length for a data portion of the second packet, wherein the first cyclic prefix length is different than the second cyclic prefix length.
+
+
+
+2. The media of claim 1, wherein a Signal field indicates the length of the cyclic prefix.
+
+
+
+3. A non-transitory computer-readable information storage media comprising stored instructions for multicarrier communication in a packet-based network, that, if executed, operate to cause: transmission or reception of a first packet using a first pilot tone allocation for a data portion of the first packet; and transmission or reception of a second packet using a second pilot tone allocation for a data portion of the second packet, wherein the first pilot tone allocation is different than the second pilot tone allocation.
+
+
+
+4. The media of claim 3, wherein a Signal field indicates the pilot tone allocation.
+
+
+
+5. A multicarrier transceiver in a packet-based network comprising means capable of transmitting or receiving a first packet using a first cyclic prefix length for a data portion of the first packet and means capable of transmitting or receiving a second packet using a second cyclic prefix length for a data portion of the second packet, wherein the first cyclic prefix length is different than the second cyclic prefix length.
+
+
+
+6. The transceiver of claim 5, wherein a Signal field indicates the length of the cyclic prefix.
+
+
+
+7. A multicarrier transceiver in a packet-based network comprising means capable of transmitting or receiving a first packet using a first pilot tone allocation for a data portion of the first packet and means capable of transmitting or receiving a second packet using a second pilot tone allocation for a data portion of the second packet, wherein the first pilot tone allocation is different than the second pilot tone allocation.
+
+
+
+8. The transceiver of claim 7, wherein a Signal field indicates the pilot tone allocation.
+
+
+
+9. A method for multicarrier communication in a packet-based local area network comprising: transmitting or receiving, by a transceiver, a first packet using a first cyclic prefix length for a data portion of the first packet; transmitting or receiving a message, wherein the message indicates a second cyclic prefix length to be used for transmitting or receiving a second packet; transmitting or receiving the second packet using the second cyclic prefix length for a data portion of the second packet, wherein the first cyclic prefix length is different than the second cyclic prefix length.
+
+
+
+10. The method of claim 9, wherein a header field indicates the length of the cyclic prefix.
+
+
+
+11. The method of claim 9, wherein the message is an acknowledgement packet.
+
+
+
+12. The method of claim 9, wherein the message is a management frame.
+
+
+
+13. The method of claim 9, wherein the message is a data frame.
+
+
+
+14. A multicarrier transceiver in a packet-based local area network capable of transmitting or receiving a first packet using a first cyclic prefix length for a data portion of the first packet, capable of transmitting or receiving a message, wherein the message indicates a second cyclic prefix length to be used for transmitting or receiving a second packet and capable of transmitting or receiving the second packet using the second cyclic prefix length for a data portion of the second packet, wherein the first cyclic prefix length is different than the second cyclic prefix length.
+
+
+
+15. The transceiver of claim 14, wherein a header field indicates the length of the cyclic prefix.
+
+
+
+16. The transceiver of claim 14, wherein the message is an acknowledgement packet.
+
+
+
+17. The transceiver of claim 14, wherein the message is a management frame.
+
+
+
+18. The transceiver of claim 14, wherein the message is a data frame.
+
+
+PatentNumber=7805143,What is claimed is:
+
+
+
+1. A mobile system comprising: a first receiver and processor for receiving and processing an Orthogonal Frequency Division Multiplexed (OFDM) signal into a first processed video baseband signal and providing said first processed video signal to a user of said mobile system; a processor and transmit filter for processing and filtering a second video signal generated by said user and for providing a processed and filtered Code Division Multiple Access (CDMA) second processed video signal, said first processed video signal is a distinct signal from said second processed video signal; a second receiver, and a first demodulator for receiving demodulating and processing a location finder signal into demodulated processed location finder baseband signal; a processor for processing a photo camera generated signal, generated by said user, into a Time Division Multiple Access (TDMA) processed photo camera signal; a processor for processing said processed location finder signal combined with said processed TDMA signal and for providing said processed location finder signal combined with said processed TDMA signal to a modulator and transmitter; a modulator and a transmitter for modulation and transmission of said provided location finder signal with said TDMA signal comprising two distinct amplifiers, one of said two amplifiers operated in a linearly amplified mode and the other of said amplifiers operated in a non-linearly amplified mode and for modulation and transmission of said CDMA second processed video signal; and a third receiver for receiving a TDMA transmitted signal, said third receiver comprising: a second demodulator; receiver filter; and receive processor for demodulation, filtering and processing of said TDMA transmitted signal, said receiver filter for filtering of said TDMA transmitted signal provides received baseband cross-correlated in-phase and quadrature-phase TDMA signal.
+
+
+
+2. A system comprising: a processor for processing a video signal, said video signal generated in a cellular phone, into a first bit rate processed Orthogonal Frequency Division Multiplexed (OFDM) video signal and providing said processed video OFDM signal to a first modulator and first transmitter for modulation and transmission of said first processed video OFDM signal; a processor and transmit filter for processing and filtering a camera signal, said camera signal generated by a photo camera in said cellular phone, and for providing a second bit rate Code Division Multiple Access (CDMA) processed cross-correlated in-phase and quadrature-phase filtered camera generated signal, said video signal is a distinct signal from said camera signal; a receiver, demodulator and processor for receiving, demodulating and processing a location finder signal into demodulated processed location finder baseband signal; a processor for processing said processed location finder baseband signal combined with said processed cross-correlated CDMA signal and for providing said combined processed location finder baseband signal with said processed CDMA signal to a second modulator and a second transmitter for modulation and transmission of said processed location finder signal with said CDMA signal; a control circuit for receiving a touch screen generated signal and for generating from said touch screen generated signal a touch screen control signal, said touch screen control signal used for control of said transmission of said processed location finder signal with said CDMA signal and for control of said transmission of said processed OFDM video signal; and a receiver, a demodulator, a receiver filter, and a receiver processor for receiving, demodulating, filtering and processing of a received modulated OFDM signal, said OFDM received signal is demodulated and processed into received, demodulated filtered and processed OFDM signal and provided to an interface unit, said interface unit located in said cellular phone.
+
+
+
+3. The system of claim 1, further comprising a circuitry for processing a voice signal into a filtered Time Division Multiple Access (TDMA) voice signal comprising cross-correlated in-phase and quadrature-phase filtered baseband signal and further comprising a cable connection to a television set for connecting said modulated and transmitted CDMA second processed video signal to a television set and further comprising a control circuit for receiving a touch screen generated signal and for generating from said touch screen generated signal a touch screen control signal, said touch screen control signal used for control of said transmission of said combined processed location finder signal with said TDMA signal and for control of connecting said processed OFDM video signal to said user for use by said user.
+
+
+
+4. The system of claim 1, further comprising a processor for processing a voice signal into Time Division Multiple Access (TDMA) signal comprising cross-correlated in-phase and quadrature-phase filtered digital to analog (D/A) converted baseband signal and further comprising a processor for processing a data signal into cross-correlated in-phase and quadrature-phase Code Division Multiple Access (CDMA) shaped signal and further comprising a wireless signal transmitter for transmitting said modulated and transmitted CDMA second processed video signal to a non-mobile receiver.
+
+
+
+5. The system of claim 1 wherein said Orthogonal Frequency Division Multiplexed (OFDM) voice signal comprises a Video over Internet Protocol (ViIP) provided signal and further comprising a touch screen generated signal and for generating from said touch screen generated signal a touch screen control signal, said touch screen control signal used for control of said transmission of said combined processed location finder signal with said TDMA signal and for control of transmission of said CDMA second processed video signal.
+
+
+
+6. The system of claim 1 wherein said OFDM first processed signal comprises a signal received from a Video over Internet Protocol (ViIP) or video over intranet signal and further comprising a processor for processing a barcode generated signal, said barcode generated signal being generated in said mobile unit. and further comprising a receiver for reception of a location finder modulated signal, received from two distinct satellite based systems and from a non-satellite based location finder transmitters.
+
+
+
+7. The system of claim 1, further comprising a processor for processing a touch screen generated signal into a processed touch screen generated control signal, wherein said touch screen generated control signal is used for transmission of a remote control signal for control of a remotely located non-mobile device.
+
+
+
+8. The system of claim 1 wherein said Orthogonal Frequency Division Multiplex (OFDM) signal is a signal used in a Wireless Local Area Network (WLAN), specified or recommended in one or more IEEE standards and said mobile system further comprises a Multiple Input Multiple Output (MIMO) system and further comprises a processor for processing a touch screen generated signal into a touch screen control signal used for control of said transmission of said combined processed location finder signal with said TDMA signal.
+
+
+
+9. The system of claim 1 wherein said Orthogonal Frequency Division Multiplex (OFDM) signal is a wireless fidelity (Wi-Fi) signal and said mobile system further comprises a processor for processing a fingerprint generated signal for identification of said user.
+
+
+
+10. The system of claim 2 further comprising a processor for processing said camera signal into cross-correlated in-phase and quadrature-phase filtered signal comprising cross-correlated Time Division Multiple Access (TDMA) signal and said system further comprising a cable connection to a television set for connecting said modulated and transmitted CDMA second processed video signal to a television set.
+
+
+
+11. The system of claim 2 further comprising a radio frequency (RF) receiver which is located at a remote location from said cellular phone and said system further comprises a Time Division Multiple Access (TDMA) processor for processing said camera signal into a processed TDMA in-phase and quadrature-phase cross-correlated TDMA camera signal and further comprising a processor for processing a barcode generated signal. and further comprising a receiver for reception of a location finder modulated signal, received from two distinct satellite based systems and from a non-satellite based location finder transmitters.
+
+
+
+12. A system comprising: a processor for processing a video signal, said video signal generated by a user of a mobile device, into a processed Code Division Multiple Access (CDMA) video signal and providing said processed CDMA video signal to a modulator and transmitter for modulation and transmission of said processed CDMA video signal; a processor and transmit filter for processing and filtering said user generated voice signal, and for providing a Time Division Multiple Access (TDMA) processed filtered voice signal for modulation and transmission of said processed TDMA voice signal to said modulator and transmitter; a receiver, demodulator and processor for receiving, demodulating and processing a received location finder signal into a demodulated processed location finder baseband signal; a processor for processing said processed location finder baseband signal with said processed TDMA voice signal and for providing said processed location finder baseband signal combined with said processed TDMA signal to said modulator and transmitter for modulation and transmission of said processed location finder signal combined with said processed TDMA signal; a control circuit for receiving a touch screen generated signal and for generating from said touch screen generated signal a touch screen control signal, said touch screen control signal used for control of said transmission of said processed location finder signal combined with said processed TDMA signal and for control of said transmission of said processed CDMA video signal; and a receiver, a demodulator, a receiver filter, and a processor for receiving, demodulating, filtering and processing a received modulated Orthogonal Frequency Division Multiplexed (OFDM) signal, into received, demodulated filtered and processed OFDM signal and for providing said processed OFDM signal to an interface unit for use by said user of said mobile device.
+
+
+
+13. The system of claim 1, further comprising a cable connection to a television set for connecting said modulated and transmitted CDMA second processed video signal to a television set and further comprising a control circuit for receiving a touch screen generated signal and for generating from said touch screen generated signal a touch screen control signal, said touch screen control signal used for control of said transmission of said combined processed location finder signal with said TDMA signal.
+
+
+
+14. The system of claim 1 further comprising a touch screen generated signal for control of transmission of said modulator and transmitter and for control of said providing said first processed video signal to a subscriber of said mobile system and further comprising a receiver for reception of a location finder modulated signal, received from two distinct satellite based systems and from non-satellite based location finder transmitters and wherein said CDMA second processed signal comprises a cross-correlated in-phase and quadrature-phase filtered signal and said touch screen generated signal for control is used for remote control of three dimensional (3D) images and said system comprises a remote control device for remote control of a television (TV) set and a voice recognition system and a Software Defined Radio (SDR).
+
+
+
+15. The system of claim 12 further comprising a Time Division Multiple Access (TDMA) processor for processing a camera generated signal into a processed TDMA in-phase and quadrature-phase cross-correlated TDMA camera signal and further comprising a processor for processing a barcode generated signal into a processed cross-correlated in-phase and quadrature-phase signal. and further comprising a receiver for reception of a location finder modulated signal, received from two distinct satellite based systems and from a non-satellite based location finder transmitters and a said touch screen generated signal is used for remote control of three dimensional (3D) images and said system comprises a remote control device for remote control of a television (TV) set and a voice recognition system and a Software Defined Radio (SDR).
+
+
+
+16. The system of claim 12 further comprising a non-quadrature modulator for non-quadrature modulation of a signal generated by said user and comprises a Multiple Input Multiple Output (MIMO) system.
+
+
+
+17. The system of claim 12 further comprising further comprising a wired connection to a television set for connecting said modulated and transmitted CDMA video signal to a television set.
+
+
+PatentNumber=7809330,What is claimed is:
+
+
+
+1. A method for reselecting an antenna for a mobile station by a home base station forming a data channel to the mobile station having at least two antennas in a cellular mobile communication system using multiple antennas, the method comprising the steps of: receiving from the mobile station channel qualities of first antennas of the home base station and second antennas of a neighbor base station of the home base station; determining whether to reselect antennas for the mobile station according to the channel qualities; and selecting at least two antennas from among the first antennas and the second antennas; wherein the at least two antennas are selected based on the measured channel qualities.
+
+
+
+2. The method of claim 1, wherein the step of determining whether to reselect antennas comprises the step of comparing a channel quality for an antenna to which a current channel is formed with a threshold value for a channel quality.
+
+
+
+3. The method of claim 1, wherein the step of determining whether to reselect antennas comprises the step of comparing a channel quality for an antenna to which a current channel is formed with channel qualities for all possible antenna configurations for the first antennas and the second antennas.
+
+
+
+4. The method of claim 1, further comprising the step of transmitting corresponding information to the neighbor base station if the selected at least two antennas include the second antennas.
+
+
+
+5. The method of claim 1, wherein the channel quality includes at least one of a noise power, a signal power, a correlation feature, a Received Signal Strength Indicator (RSSI), a Carrier-to-Interference ratio (C/I), a Signal-to-Noise Ratio (SNR), and a Signal-to-Interference Noise Ratio (SINR).
+
+
+
+6. The method of claim 1, wherein upon receiving an approval for use of the selected at least two antennas from the home base station, the mobile station releases connections to antennas through which current data channels are formed, and forms new data channels through the selected at least two antennas.
+
+
+
+7. A system for reselecting an antenna for a mobile station by a home base station forming a data channel to the mobile station including at least two antennas in a cellular mobile communication system using multiple antennas, the system comprising: a mobile station for measuring channel qualities for first antennas of the home base station and second antennas of a neighbor base station of the home base station, and transmitting the measured channel qualities; and a home base station for receiving the measured channel qualities, determining whether to reselect antennas for the mobile station based on the measured channel qualities, and selecting at least two antennas among the first antennas and the second antennas according to the measured channel qualities.
+
+
+
+8. The system of claim 7, wherein the home base station comprises: a channel information processor for receiving the measured channel qualities; a storage for storing information on the home base station and the first antennas and information on the neighbor base station and the second antennas; an antenna reselect manager for determining whether to reselect the antennas for the mobile station based on the measured channel qualities; and an antenna reselect scheduler for selecting at least two antennas from among the first antennas and the second antennas according to the measured channel qualities.
+
+
+
+9. The system of claim 8, wherein if the at least two antennas include the second antennas, the antenna reselect manager transmits corresponding information to the neighbor base station based on the information stored in the storage.
+
+
+
+10. The system of claim 8, wherein the antenna reselect manager defines a threshold value for the channel quality, compares a channel quality, for an antenna to which a current channel is formed, with the threshold value, and determines whether to reselect the antennas based on the comparison result.
+
+
+
+11. The system of claim 8, wherein the antenna reselect manager compares a channel quality, for an antenna to which a current channel is formed, with channel qualities for all possible antenna configurations for the first antennas and the second antennas, and determines whether to reselect the antennas according to the comparison result.
+
+
+
+12. The system of claim 7, wherein the channel quality includes at least one of a noise power, a signal power, a correlation feature, a Received Signal Strength Indicator (RSSI), a Carrier-to-Interference ratio (C/I), a Signal-to-Noise Ratio (SNR), and a Signal-to-Interference Noise Ratio (SINR).
+
+
+
+13. The system of claim 7, wherein upon receiving an approval for use of the selected at least two antennas from the home base station, the mobile station releases connections to antennas through which current data channels are formed, and forms new data channels through the selected at least two antennas.
+
+
+PatentNumber=7869397,We claim:
+
+
+
+1. An apparatus comprising: a modem configured to process according to orthogonal frequency division multiplex (OFDM) techniques baseband transmit signals for wireless transmission and baseband receive signals derived from received wireless signals; and a medium access control (MAC) processor configured to connect to the modem, wherein the MAC processor is configured to process an access request contained in a transmission received from a particular communication device among a plurality of communication devices and recovered from the received transmission by the modem, wherein the MAC processor is configured to process the access request based on a subgroup of a plurality of OFDM tones contained in the access request which uniquely identifies the particular communication device that transmitted the access request.
+
+
+
+2. The apparatus of claim 1, wherein the MAC processor is further configured to generate transmission schedule data based on the access request and to couple the transmit schedule data to the modem for transmission to at least the particular communication device.
+
+
+
+3. The apparatus of claim 2, wherein the modem is configured to analyze the training data comprised of predefined values for OFDM tones.
+
+
+
+4. The apparatus of claim 1, wherein the modem is further configured to extract training data contained in the access request and to determine an OFDM channel response with respect to the particular communication device based on the training data.
+
+
+
+5. The apparatus of claim 1, wherein the modem is configured to process baseband transmit signals and baseband receive signals according to bursts of a fixed length, and further comprising a Fast Fourier Transform (FFT) module having a single-length implementation for baseband receive signal processing and an Inverse FFT module having a single-length implementation for baseband transmit signal processing.
+
+
+
+6. The apparatus of claim 1, wherein the modem is configured to generate, in response to receiving an access request, a timing adjustment command for transmission to the particular communication device, wherein the timing adjustment command is configured to cause the particular communication device to adjust its timing so as to reduce interference with other messages transmitted by other communication devices.
+
+
+
+7. The apparatus of claim 1, wherein the modem is configured to allocate a guard time interval associated with a plurality of potential access requests from the plurality of communication devices, wherein the guard time interval is configured to accommodate range uncertainty associated with the plurality of communication devices.
+
+
+
+8. The apparatus of claim 1, wherein the MAC processor is configured to process multiple unsynchronized access requests each comprising cyclic prefix samples, training tones and a guard time interval transmitted from multiple communication devices and to ascertain a time of arrival of each simultaneously received unsynchronized access request without overlapping a next burst in a frame.
+
+
+
+9. The apparatus of claim 8, wherein the MAC processor is configured to process each access request such that a length of the cyclic prefix samples and a number of the training tones is greater than or equal to a length in terms of number of symbols of a baseband channel.
+
+
+
+10. The apparatus of claim 1, wherein the MAC processor is configured to process multiple access requests transmitted simultaneously from different communication devices and to distinguish the access requests from the different communication devices based on the subgroup of OFDM tones for each access request.
+
+
+
+11. An apparatus comprising: a modem configured to process according to orthogonal frequency division multiplex (OFDM) techniques baseband transmit signals for wireless transmission and baseband receive signals derived from received wireless signals; and a medium access control (MAC) processor configured to connect to the modem, wherein the MAC processor is configured to generate an access request for transmission to a central access device associated with a wireless network, wherein the MAC processor is configured to generate the access request comprising a subgroup of a plurality of OFDM tones that uniquely identifies the apparatus that transmits the access request.
+
+
+
+12. The apparatus of claim 11, wherein the modem is configured to include training data in the access request.
+
+
+
+13. The apparatus of claim 11, wherein the modem is configured to process baseband transmit signals and baseband receive signals according to bursts of a fixed length, and further comprising a Fast Fourier Transform (FFT) module having a single-length implementation for baseband receive signal processing and an Inverse FFT module having a single-length implementation for baseband transmit signal processing.
+
+
+
+14. The apparatus of claim 11, wherein the modem is configured to, in response to receiving a timing adjustment command from the central access device, adjust timing of transmissions made to the central access device.
+
+
+
+15. The apparatus of claim 11, wherein the modem is configured to generate a frame contained in the access request, wherein the frame comprises a guard time interval configured to allow the central access device, upon receiving the frame, to determine the time of arrival of the frame, with respect to each of a plurality of unsynchronized access requests from other devices.
+
+
+
+16. The apparatus of claim 15, wherein the modem is configured to generate the guard time interval of a duration sufficient to prevent overlap with a next scheduled access request.
+
+
+
+17. The apparatus of claim 11, wherein the MAC processor is configured to generate the access request comprising prefix samples, training tones and a guard time interval that are configured to allow the central access device to ascertain a time of arrival of simultaneously received unsynchronized access requests from multiple devices without overlapping a next burst in a frame.
+
+
+
+18. The apparatus of claim 17, wherein the MAC processor is configured to generate the access request such that a length of the cyclic prefix samples and a number of the training tones is greater than or equal to a length in terms of number of symbols of a baseband channel.
+
+
+PatentNumber=7903537,We claim:
+
+
+
+1. A method for allocating channel resources in an orthogonal frequency-division multiple access network including a set of base stations and a set of mobile stations for each base station, comprising the steps of: constructing an interference graph, in which nodes in the interference graph represent mobile stations in the orthogonal frequency-division multiple access network, and each edge between a pair of nodes represents a potential interference between the mobile stations represented by the pair of nodes; partitioning the interference graph into non-overlapping clusters of the nodes; assigning a weight to each edge, in which the weight is proportional to the potential interference, and inversely proportional to a channel quality of the channels, in which weight is selected from w.sub.B, w.sub.S, w.sub.N, w.sub.0, w.sub.1, w.sub.2, w.sub.A, where the weights w.sub.B, w.sub.S, w.sub.N, and w.sub.A correspond to weights associated with base station cooperation, space division multiple access, no-interference, and intra-cell interference, respectively, and w.sub.0, w.sub.1, w.sub.2, are inter channel interference at various interference levels depending on geographic locations of the mobile stations represented by the nodes, in which the weights are ranked as w.sub.B.apprxeq.w.sub.S<<w.sub.N<w.sub.0<w.sub.1<w.sub.2&l- t;<w.sub.A, and allocating channel resources to the mobile stations based on a structure of the partitioned interference graph, the potential interference and the channel quality.
+
+
+
+2. The method of claim 1, further comprising: maintaining a diversity set for each mobile station, in which the diversity set indicates an anchor base station for the mobile station and any adjacent base stations, and in which a structure of the interference graph and the potential interference is based on the diversity sets.
+
+
+
+3. The method of claim 2, further comprising: exchanging the diversity sets among all adjacent base stations in the orthogonal frequency-division multiple access network.
+
+
+
+4. The method of claim 2, further comprising: determining, at each base station based on the diversity sets, whether a set of mobile stations served by the base station can perform space division multiple access; determining, at each base station based upon the diversity sets, whether the set of mobile stations served by the base station can perform base station cooperation ; determining, at each base station based on information in the diversity set, whether the set of mobile stations served by the base station cause inter-cell interference in the set of mobile stations served by the adjacent base station; and determining, at each base station, whether the mobile stations served by the base station causes intra-cell interference within the set of mobile stations served by the base station.
+
+
+
+5. The method of claim 1, in which a frequency reuse factor of the orthogonal frequency-division multiple access network is one.
+
+
+
+6. The method of claim 1, in which the channel resources are allocated according to inter-cell interference coordination, and in which the allocated channel resources are disjoint.
+
+
+
+7. The method of claim 1, in which the channel resources are allocated according to base station cooperation, and in which the allocated channel resources are shared.
+
+
+
+8. The method of claim 7, in which the base station cooperation uses space division multiple access.
+
+
+
+9. The method of claim 1, in which the partitioning uses a max k-cut process, and in which a sum of the weights of the edges between each cluster is maximized.
+
+
+
+10. The method of claim 9, in which the mobiles stations represented by the nodes in a particular cluster are allocated the same channel resources, and mobile stations represented by nodes in adjacent clusters are allocated different channel resources.
+
+
+
+11. The method of claim 10, in which the network includes M mobile stations and further comprising: assigning M arbitrarily selected nodes to N clusters, one in each cluster; and assigning iteratively M-N nodes to the cluster so that an increase in intra-cluster weights is minimized, wherein M and N are integers.
+
+
+
+12. The method of claim 1, in which a weight w.sub.ab on an edge between node a and node b represents potential interference.
+
+
+
+13. The method of claim 1, in which the weights are (w.sub.B, w.sub.S, w.sub.N, w.sub.0, w.sub.1, w.sub.2, w.sub.A)=(-10.sup.3, -10.sup.3+50, 0, 50, 100, 200, 10.sup.5).
+
+
+
+14. The method of claim 1, in which a weight w.sub.ab are selected from (w.sub.B, w.sub.S, w.sub.N, w.sub.0, w.sub.1, w.sub.2, w.sub.A.
+
+
+
+15. The method of claim 1, further comprising: ordering the clusters in an ascending order of cluster size; allocating the channel resources to the mobile stations represented by the nodes in the cluster in the ascending order, such that a sum capacity if the allocated channel resource is a maximum for the cluster.
+
+
+
+16. The method of claim 15, further comprising: assigning a unique edge weight associated with every subchannel in the graph for interference caused by intra-cell interference; assigning a unique edge weight associated with every subchannel in the graph for interference caused by inter-cell interference; assigning a unique edge weight associated with every subchannel in the graph for interference caused by space division multiple access; and assigning a unique edge weight associated with every subchannel in the graph for interference caused by base station cooperation.
+
+
+
+17. The method of claim 1, further comprising: allocating the channel resources to each cluster so a sum capacity of the orthogonal frequency-division multiple access network is maximized.
+
+
+
+18. The method of claim 1, further comprising: allocating the channel resources to each cluster randomly.
+
+
+PatentNumber=7907508,We claim:
+
+
+
+1. A method for allocating channel resources in an orthogonal frequency-division multiple access network including a set of base stations and a set of mobile stations for each base station, comprising the steps of: constructing a multigraph, in which nodes in the multigraph represent mobile stations in the orthogonal frequency-division multiple access network, and each edge between a pair of nodes represents a potential interference and a channel quality for channels used by the mobile stations represented by the pair of nodes; assigning a weight to each edge, in which the weight is proportional to the potential interference, and inversely proportional to the channel quality of the channels, in which the weight is selected from w.sub.B, w.sub.S, w.sub.N, w.sub.0, w.sub.1, w.sub.2, w.sub.A, where the weights w.sub.B, w.sub.S, w.sub.N, and w.sub.A correspond to weights associated with base station cooperation, space division multiple access, no-interference, and intra-cell interference, respectively, and w.sub.0, w.sub.1, w.sub.2, are inter channel interference at various interference levels depending on geographic locations of the mobile stations represented by the nodes, in which the weights are ranked as w.sub.B.apprxeq.w.sub.S<<w.sub.N<w.sub.0<w.sub.1<w.sub.2&l- t;<w.sub.A; and allocating channel resources to the mobile stations based on a structure of the multigraph, the potential interference and the channel quality.
+
+
+
+2. The method of claim 1, further comprising: maintaining a diversity set for each mobile station, in which the diversity set indicates an anchor base station for the mobile station and any adjacent base stations, and in which the structure of the multigraph and the potential interference is based on the diversity sets.
+
+
+
+3. The method of claim 2, further comprising: determining, at each base station based on the diversity sets, whether a set of mobile stations served by the base station can perform space division multiple access; determining, at each base station based upon the diversity sets, whether the set of mobile stations served by the base station can perform base station cooperation; determining, at each base station based on information in the diversity set, whether the set of mobile stations served by the base station cause inter-cell interference in the set of mobile stations served by the adjacent base station; and determining, at each base station, whether the mobile stations served by the base station causes intra-cell interference within the set of mobile stations served by the base station.
+
+
+
+4. The method of claim 3, further comprising: assigning a unique edge weight associated with every subchannel in the multigraph for interference caused by intra-cell interference; assigning a unique edge weight associated with every subchannel in the multigraph for interference caused by inter-cell interference; assigning a unique edge weight associated with every subchannel in the multigraph for interference caused by space division multiple access; and assigning a unique edge weight associated with every subchannel in the multigraph for interference caused by base station cooperation.
+
+
+
+5. The method of claim 1, in which a frequency reuse factor of the orthogonal frequency-division multiple access network is one.
+
+
+
+6. The method of claim 1, in which the channel resources are allocated according to inter-cell interference coordination, and in which the allocated channel resources are disjoint.
+
+
+
+7. The method of claim 1, in which the channel resources are allocated according to base station cooperation, and in which the allocated channel resources are shared.
+
+
+
+8. The method of claim 7, in which the base station cooperation uses space division multiple access.
+
+
+
+9. The method of claim 1, in which a weight w.sub.ab,n on an edge between node a and node b is w.sub.ab,n=w.sub.ab*f.sub.ab,n, where w.sub.ab is the potential interference, and f.sub.ab,n is dependent on an instantaneous signal strength f.sub.ab,n, and the signal strength in inversely proportional to the channel quality.
+
+
+
+10. The method of claim 1, further comprising: partitioning the nodes in the graph into clusters such that a total weight of the edges in each cluster is minimized.
+
+
+
+11. The method of claim 10, in which the partitioning uses a min k-partition process.
+
+
+
+12. The method of claim 1, in which the same channel resources are assigned to all mobile stations represented by the nodes in a particular cluster.
+
+
+
+13. The method of claim 1, in which the weight are selected from w.sub.B, w.sub.S, w.sub.N, w.sub.0, w.sub.1, w.sub.2, w.sub.A, and in which defining w.sub.ab,n, .times..times..di-elect cons..times..times..times..times. ##EQU00002## .times..times..di-elect cons. ##EQU00002.2## .times..times..times. ##EQU00002.3## where h.sub.an and h.sub.bn are instantaneous channel gains in subchannel n for node a and b, respectively.
+
+
+
+14. The method of claim 1, further comprising: exchanging diversity sets among all adjacent base stations in the orthogonal frequency-division multiple access network.
+
+
+PatentNumber=7916624,What is claimed is:
+
+
+
+1. An apparatus for generating a vector of digital signal samples (S), the apparatus comprising: a processor; and a memory coupled to the processor, the memory including a set of instructions stored therein and executable by the processor to receive a discrete signal of complex data symbols (C), calculate frequency responses (A.sub.1, . . . A.sub.M) corresponding to tones (f.sub.(1), . . . f.sub.(M)), through an M-point discrete Fourier transform (DFT), and output a vector [A.sub.1, . . . A.sub.M] of length M, expand the vector to a new vector of length N, and insert zero-value symbols corresponding to tones other than tones allocated to a transmitter, perform an N-point inverse discrete Fourier transform (IDFT) operation on the new vector after zero insertion to obtain the vector of digital signal samples (S); pre-pend a cyclic prefix to the vector of digital signal samples (S); and generate a signal representing the pre-pended vector digital signal samples (S) for transmission.
+
+
+
+2. The apparatus of claim 1, wherein the tones (f.sub.(1), . . . f.sub.(M)) are allocated tones available for transmission.
+
+
+
+3. The apparatus of claim 1, wherein the allocated tones are contiguous.
+
+
+
+4. The apparatus of claim 1, wherein the vector of length N is larger than the vector of length M.
+
+
+
+5. The apparatus of claim 1, wherein the allocated tones are equally spaced.
+
+
+
+6. The apparatus of claim 2, wherein the allocated tones are contiguous.
+
+
+
+7. The apparatus of claim 2, wherein the vector of length N is larger than the vector of length M.
+
+
+
+8. The apparatus of claim 2, wherein the allocated tones are equally spaced.
+
+
+
+9. The apparatus of claim 5, wherein the allocated tones are contiguous.
+
+
+
+10. The apparatus of claim 5, wherein the vector of length N is larger than the vector of length M.
+
+
+
+11. The apparatus of claim 9, wherein the vector of length N is larger than the vector of length M.
+
+
+
+12. The apparatus of claim 6, wherein the vector of length N is larger than the vector of length M.
+
+
+
+13. The apparatus of claim 12, wherein the allocated tones are equally spaced.
+
+
+
+14. The apparatus of claim 7, wherein the allocated tones are equally spaced.
+
+
+
+15. The apparatus of claim 7, wherein the allocated tones are contiguous.
+
+
+
+16. The apparatus of claim 8, wherein the allocated tones are contiguous.
+
+
+
+17. An apparatus for generating a vector of digital signal samples (S), the apparatus comprising: a processor; and at least one hardware module coupled to the processor and configured to receive a discrete signal of complex data symbols (C), calculate frequency responses (A.sub.1, . . . A.sub.M) corresponding to tones (f.sub.(1), . . . f.sub.(M)), through an M-point discrete Fourier transform (DFT), and output a vector [A.sub.1, . . . A.sub.M] of length M, expand the vector [A.sub.1, . . . A.sub.M] to a new vector of length N, and insert zero-value symbols corresponding to tones other than tones allocated to a transmitter, perform an N-point inverse discrete Fourier transform (IDFT) operation on the new vector after zero insertion to obtain the vector of digital signal samples (S), pre-pend a cyclic prefix to the vector of digital signal samples (S); and generate a signal representing the pre-pended vector of digital signal samples (S) for transmission.
+
+
+
+18. The apparatus of claim 17, wherein the tones (f.sub.(1), . . . f.sub.(M)) are allocated tones available for transmission.
+
+
+
+19. The apparatus of claim 17, wherein the allocated tones are contiguous.
+
+
+
+20. The apparatus of claim 17, wherein the vector of length N is larger than the vector of length M.
+
+
+
+21. The apparatus of claim 17, wherein the allocated tones are equally spaced.
+
+
+
+22. The apparatus of claim 18, wherein the allocated tones are contiguous.
+
+
+
+23. The apparatus of claim 18, wherein the vector of length N is larger than the vector of length M.
+
+
+
+24. The apparatus of claim 18, wherein the allocated tones are equally spaced.
+
+
+
+25. The apparatus of claim 21, wherein the allocated tones are contiguous.
+
+
+
+26. The apparatus of claim 21, wherein the vector of length N is larger than the vector of length M.
+
+
+
+27. The apparatus of claim 25, wherein the vector of length N is larger than the vector of length M.
+
+
+
+28. The apparatus of claim 22, wherein the vector of length N is larger than the vector of length M.
+
+
+
+29. The apparatus of claim 28, wherein the allocated tones are equally spaced.
+
+
+
+30. The apparatus of claim 23, wherein the allocated tones are equally spaced.
+
+
+
+31. The apparatus of claim 23, wherein the allocated tones are contiguous.
+
+
+
+32. The apparatus of claim 24, wherein the allocated tones are contiguous.
+
+
+PatentNumber=7916625,The invention claimed is:
+
+
+
+1. A method for multicarrier communication in a packet-based network comprising: transmitting or receiving, by a transceiver, a first packet using a first pilot tone allocation for a data portion of the first packet; transmitting or receiving a message, wherein the message indicates a second pilot tone allocation to be used for transmitting or receiving a second packet; and transmitting or receiving the second packet using the second pilot tone allocation for a data portion of the second packet, wherein the first pilot tone allocation is different than the second pilot tone allocation.
+
+
+
+2. The method of claim 1, wherein a header field indicates the pilot tone allocation.
+
+
+
+3. The method of claim 1, wherein the message is an acknowledgement packet.
+
+
+
+4. The method of claim 1, wherein the message is a management frame.
+
+
+
+5. The method of claim 1, wherein the message is a data frame.
+
+
+
+6. A multicarrier transceiver in a packet-based network capable of transmitting or receiving a first packet using a first pilot tone allocation for a data portion of the first packet, capable of transmitting or receiving a message, wherein the message indicates a second pilot tone allocation to be used for transmitting or receiving a second packet and capable of transmitting or receiving the second packet using the second pilot tone allocation for a data portion of the second packet, wherein the first pilot tone allocation is different than the second pilot tone allocation.
+
+
+
+7. The transceiver of claim 6, wherein a header field indicates the pilot tone allocation.
+
+
+
+8. The transceiver of claim 6, wherein the message is an acknowledgement packet.
+
+
+
+9. The transceiver of claim 6, wherein the message is a management frame.
+
+
+
+10. The transceiver of claim 6, wherein the message is a data frame.
+
+
+
+11. A multicarrier transceiver for a multicarrier communication in a packet-based network comprising: means for transmitting or receiving a first packet using a first pilot tone allocation for a data portion of the first packet; means for transmitting or receiving a message, wherein the message indicates a second pilot tone allocation to be used for transmitting or receiving a second packet; and means for transmitting or receiving the second packet using the second pilot tone allocation for a data portion of the second packet, wherein the first pilot tone allocation is different than the second pilot tone allocation.
+
+
+
+12. The transceiver of claim 11, wherein a header field indicates the pilot tone allocation.
+
+
+
+13. The transceiver of claim 11, wherein the message is an acknowledgement packet.
+
+
+
+14. The transceiver of claim 11, wherein the message is a management frame.
+
+
+
+15. The transceiver of claim 11, wherein the message is a data frame.
+
+
+
+16. A non-transitory computer-readable information storage media having stored thereon process-executable instructions that, if executed, perform a method for multicarrier communication in a packet-based network comprising: transmitting or receiving a first packet using a first pilot tone allocation for a data portion of the first packet; transmitting or receiving a message, wherein the message indicates a second pilot tone allocation to be used for transmitting or receiving a second packet; and transmitting or receiving the second packet using the second pilot tone allocation for a data portion of the second packet, wherein the first pilot tone allocation is different than the second pilot tone allocation.
+
+
+
+17. The media of claim 16, wherein a header field indicates the pilot tone allocation.
+
+
+
+18. The media of claim 16, wherein the message is an acknowledgement packet.
+
+
+
+19. The media of claim 16, wherein the message is a management frame.
+
+
+
+20. The media of claim 16, wherein the message is a data frame.
+
+
+PatentNumber=7924699,What is claimed is:
+
+
+
+1. An apparatus for generating a vector of digital signal samples (S), the apparatus comprising: means for processing; and means for storing coupled to the means for processing, the means for storing including a set of instructions stored therein and executable by the means for processing to receive a discrete signal of complex data symbols (C), calculate frequency responses (A.sub.1, . . . A.sub.M) corresponding to tones (f.sub.(1), . . . f.sub.(M)), through an M-point discrete Fourier transform (DFT), and output a vector [A.sub.1, . . . A.sub.M] of length M, expand the vector [A.sub.1, . . . A.sub.M] to a new vector of length N, and insert zero-value symbols corresponding to tones other than tones allocated to a transmitter, and perform an N-point inverse discrete Fourier transform (IDFT) operation on the new vector after zero insertion to obtain the vector of digital signal samples (S), and generate a low peak-to-average OFDM-based signal using the vector of digital signal samples (S) for transmission.
+
+
+
+2. The apparatus of claim 1, wherein the tones (f.sub.(1), . . . f.sub.(M)) are allocated tones available for transmission.
+
+
+
+3. The apparatus of claim 1, wherein the allocated tones are contiguous.
+
+
+
+4. The apparatus of claim 1, wherein the vector of length N is larger than the vector of length M.
+
+
+
+5. The apparatus of claim 1, wherein the allocated tones are equally spaced.
+
+
+
+6. The apparatus of claim 2, wherein the allocated tones are contiguous.
+
+
+
+7. The apparatus of claim 2, wherein the vector of length N is larger than the vector of length M.
+
+
+
+8. The apparatus of claim 2, wherein the allocated tones are equally spaced.
+
+
+
+9. The apparatus of claim 5, wherein the allocated tones are contiguous.
+
+
+
+10. The apparatus of claim 5, wherein the vector of length N is larger than the vector of length M.
+
+
+
+11. The apparatus of claim 9, wherein the vector of length N is larger than the vector of length M.
+
+
+
+12. The apparatus of claim 6, wherein the vector of length N is larger than the vector of length M.
+
+
+
+13. The apparatus of claim 12, wherein the allocated tones are equally spaced.
+
+
+
+14. The apparatus of claim 7, wherein the allocated tones are equally spaced.
+
+
+
+15. The apparatus of claim 7, wherein the allocated tones are contiguous.
+
+
+
+16. The apparatus of claim 8, wherein the allocated tones are contiguous.
+
+
+
+17. An apparatus for generating a vector of digital signal samples (S), the apparatus comprising: means for processing; and at least one hardware means, coupled to the means for processing, for receiving a discrete signal of complex data symbols (C), calculating frequency responses (A.sub.1, . . . A.sub.M) corresponding to tones (f.sub.(1), . . . f.sub.(M)), through an M-point discrete Fourier transform (DFT), and outputting a vector [A.sub.1, . . . A.sub.M] of length M, expanding the vector [A.sub.1, . . . A.sub.M] to a new vector of length N, and inserting zero-value symbols corresponding to tones other than tones allocated to a transmitter, and performing an N-point inverse discrete Fourier transform (IDFT) operation on the new vector after zero insertion to obtain the vector of digital signal samples (S), and generating a low peak-to-average OFDM-based signal using the vector of digital signal samples (S) for transmission.
+
+
+
+18. The apparatus of claim 17, wherein the tones (f.sub.(1), . . . f.sub.(M)) are allocated tones available for transmission.
+
+
+
+19. The apparatus of claim 17, wherein the allocated tones are contiguous.
+
+
+
+20. The apparatus of claim 17, wherein the vector of length N is larger than the vector of length M.
+
+
+
+21. The apparatus of claim 17, wherein the allocated tones are equally spaced.
+
+
+
+22. The apparatus of claim 18, wherein the allocated tones are contiguous.
+
+
+
+23. The apparatus of claim 18, wherein the vector of length N is larger than the vector of length M.
+
+
+
+24. The apparatus of claim 18, wherein the allocated tones are equally spaced.
+
+
+
+25. The apparatus of claim 21, wherein the allocated tones are contiguous.
+
+
+
+26. The apparatus of claim 21, wherein the vector of length N is larger than the vector of length M.
+
+
+
+27. The apparatus of claim 25, wherein the vector of length N is larger than the vector of length M.
+
+
+
+28. The apparatus of claim 22, wherein the vector of length N is larger than the vector of length M.
+
+
+
+29. The apparatus of claim 28, wherein the allocated tones are equally spaced.
+
+
+
+30. The apparatus of claim 23, wherein the allocated tones are equally spaced.
+
+
+
+31. The apparatus of claim 23, wherein the allocated tones are contiguous.
+
+
+
+32. The apparatus of claim 24, wherein the allocated tones are contiguous.
+
+
+
+33. An apparatus for generating a vector of digital signal samples (S), the apparatus comprising: means for processing; and means for storing coupled to the means for processing, the means for storing including a set of instructions stored therein and executable by the means for processing to receive a discrete signal of complex data symbols (C), calculate frequency responses (A.sub.1, . . . A.sub.M) corresponding to tones (f.sub.(l), . . . f(.sub.M), through an M-point discrete Fourier transform (DFT), and output a vector [A.sub.1, . . . A.sub.M] of length M, expand the vector [A.sub.1, . . . A.sub.M] to a new vector of length N, and insert zero-value symbols corresponding to tones other than tones allocated to a transmitter, and perform an N-point inverse discrete Fourier transform (IDFT) operation on the new vector after zero insertion to obtain the vector of digital signal samples (S), to pre-pend a cyclic prefix to the vector of digital signal samples (S), and generate a low peak-to-average OFDM-based signal using the vector of digital signal samples (S) for transmission.
+
+
+
+34. An apparatus for generating a vector of digital signal samples (S), the apparatus comprising: means for processing; and at least one hardware means, coupled to the means for processing, for receiving a discrete signal of complex data symbols (C), calculating frequency responses (A.sub.1, . . . A.sub.M) corresponding to tones (f.sub.(l), . . . f.sub.(M)), through an M-point discrete Fourier transform (DFT), and outputting a vector [A.sub.1, . . . A.sub.M] of length M, expanding the vector [A.sub.1, . . . A.sub.M] to a new vector of length N, and inserting zero-value symbols corresponding to tones other than tones allocated to a transmitter, and performing an N-point inverse discrete Fourier transform (IDFT) operation on the new vector after zero insertion to obtain the vector of digital signal samples (S), pre-pending a cyclic prefix to the vector of digital signal samples (S), and generating a low peak-to-average OFDM-based signal using the vector of digital signal samples (S) for transmission.
+
+
+PatentNumber=7924841,The invention claimed is:
+
+
+
+1. A packet communication method for multicarrier communications comprising: transmitting or receiving, by a transceiver, a first packet that includes a header portion and a data portion, wherein: the header portion includes information indicating a first allocation of data bits to subcarriers for the data portion of the first packet, and the first allocation of data bits to subcarriers allocates more data bits to at least one subcarrier, used for transmitting or receiving the first packet, than to at least one other subcarrier, used for transmitting or receiving the first packet; transmitting or receiving a second packet, wherein the second packet includes information indicating a second modified allocation of data bits to subcarriers to be used for transmitting or receiving a third packet, wherein the second modified allocation of data bits is different than the first allocation of data bits; and transmitting or receiving the third packet which includes a header portion and a data portion, wherein: the header portion of the third packet includes information indicating the second modified allocation of data bits to subcarriers for the data portion of the third packet, and the second modified allocation of data bits to subcarriers allocates more data bits to at least one subcarrier, used for transmitting or receiving the third packet, than to at least one other subcarrier, used for transmitting or receiving the third packet.
+
+
+
+2. The method of claim 1, wherein the second packet is an acknowledgement packet.
+
+
+
+3. The method of claim 1, wherein the second packet is a management frame.
+
+
+
+4. The method of claim 1, wherein the second packet is a data frame.
+
+
+
+5. The method of claim 1, wherein the first allocation is determined based on a signal-to-noise (SNR) calculation wherein at least two subcarriers have a different SNR.
+
+
+
+6. The method of claim 1, wherein the second packet is a message.
+
+
+
+7. The method of claim 1, wherein the second modified allocation is determined based on a signal-to-noise (SNR) calculation wherein at least two subcarriers have a different SNR.
+
+
+
+8. A packet communication system for multicarrier communications comprising: means for transmitting or receiving, in a transceiver, a first packet that includes a header portion and a data portion, wherein: the header portion includes information indicating a first allocation of data bits to subcarriers for the data portion of the first packet, and the first allocation of data bits to subcarriers allocates more data bits to at least one subcarrier, used for transmitting or receiving the first packet, than to at least one other subcarrier, used for transmitting or receiving the first packet; means for transmitting or receiving a second packet, wherein the second packet includes information indicating a second modified allocation of data bits to subcarriers to be used for transmitting or receiving a third packet, wherein the second modified allocation of data bits is different than the first allocation of data bits; and means for transmitting or receiving the third packet which includes a header portion and a data portion, wherein: the header portion of the third packet includes information indicating the second modified allocation of data bits to subcarriers for the data portion of the third packet, and the second modified allocation of data bits to subcarriers allocates more data bits to at least one subcarrier, used for transmitting or receiving the third packet, than to at least one other subcarrier, used for transmitting or receiving the third packet.
+
+
+
+9. The system of claim 8, wherein the second packet is an acknowledgement packet.
+
+
+
+10. The system of claim 8, wherein the second packet is a management frame.
+
+
+
+11. The system of claim 8, wherein the second packet is a data frame.
+
+
+
+12. The system of claim 8, wherein the first allocation is determined based on a signal-to-noise (SNR) calculation wherein at least two subcarriers have a different SNR.
+
+
+
+13. The system of claim 8, wherein the second packet is a message.
+
+
+
+14. The system of claim 8, wherein the second modified allocation is determined based on a signal-to-noise (SNR) calculation wherein at least two subcarriers have a different SNR.
+
+
+
+15. A non-transitory computer-readable information storage media having stored thereon instructions, that when executed by a processor, cause to be performed a packet communication method for multicarrier communications comprising: transmitting or receiving, by a transceiver, a first packet that includes a header portion and a data portion, wherein: the header portion includes information indicating a first allocation of data bits to subcarriers for the data portion of the first packet, and the first allocation of data bits to subcarriers allocates more data bits to at least one subcarrier, used for transmitting or receiving the first packet, than to at least one other subcarrier, used for transmitting or receiving the first packet; transmitting or receiving a second packet, wherein the second packet includes information indicating a second modified allocation of data bits to subcarriers to be used for transmitting or receiving a third packet, wherein the second modified allocation of data bits is different than the first allocation of data bits; and transmitting or receiving the third packet which includes a header portion and a data portion, wherein: the header portion of the third packet includes information indicating the second modified allocation of data bits to subcarriers for the data portion of the third packet, and the second modified allocation of data bits to subcarriers allocates more data bits to at least one subcarrier, used for transmitting or receiving the third packet, than to at least one other subcarrier, used for transmitting or receiving the third packet.
+
+
+
+16. The media of claim 15, wherein the second packet is an acknowledgement packet.
+
+
+
+17. The media of claim 15, wherein the second packet is a management frame.
+
+
+
+18. The media of claim 15, wherein the second packet is a data frame.
+
+
+
+19. The media of claim 15, wherein the first allocation is determined based on a signal-to-noise (SNR) calculation wherein at least two subcarriers have a different SNR.
+
+
+
+20. The media of claim 15, wherein the second packet is a message.
+
+
+
+21. The media of claim 15, wherein the second modified allocation is determined based on a signal-to-noise (SNR) calculation wherein at least two subcarriers have a different SNR.
+
+
+
+22. A packet communication system for multicarrier communications comprising: a transceiver that transmits or receives a first packet that includes a header portion and a data portion, wherein: the header portion includes information indicating a first allocation of data bits to subcarriers for the data portion of the first packet, and the first allocation of data bits to subcarriers allocates more data bits to at least one subcarrier, used for transmitting or receiving the first packet, than to at least one other subcarrier, used for transmitting or receiving the first packet; a second transceiver or the transceiver that transmits or receives a second packet, wherein the second packet includes information indicating a second modified allocation of data bits to subcarriers to be used for transmitting or receiving a third packet, wherein the second modified allocation of data bits is different than the first allocation of data bits; and the second transceiver or the transceiver that transmits or receives the third packet which includes a header portion and a data portion, wherein: the header portion of the third packet includes information indicating the second modified allocation of data bits to subcarriers for the data portion of the third packet, and the second modified allocation of data bits to subcarriers allocates more data bits to at least one subcarrier, used for transmitting or receiving the third packet, than to at least one other subcarrier, used for transmitting or receiving the third packet.
+
+
+
+23. The system of claim 22, wherein the second packet is an acknowledgement packet.
+
+
+
+24. The system of claim 22, wherein the second packet is a management frame.
+
+
+
+25. The system of claim 22, wherein the second packet is a data frame.
+
+
+
+26. The system of claim 22, wherein the first allocation is determined based on a signal-to-noise (SNR) calculation wherein at least two subcarriers have a different SNR.
+
+
+
+27. The system of claim 22, wherein the second packet is a message.
+
+
+
+28. The system of claim 22, wherein the second modified allocation is determined based on a signal-to-noise (SNR) calculation wherein at least two subcarriers have a different SNR.
+
+
+PatentNumber=7929416,What is claimed is:
+
+
+
+1. A receiver in an orthogonal frequency division multiplexing OFDM based communication system including: a processor adapted to perform channel estimation using a received reference signal transmitted from at least one antenna, said reference signal being substantially located into at least two non-consecutive OFDM symbols of a transmission time interval comprising of more than two OFDM symbols and a power level of said reference signal is divided into said non-consecutive OFDM symbols in said transmission time interval and adapted to use the reference signal located in a first OFDM symbol in succeeding transmission time intervals in addition to the reference symbols in a current transmission time interval and a preceding transmission time intervals.
+
+
+
+2. An apparatus for an orthogonal frequency division multiplexing (OFDM) based communication system, said apparatus: adapted to perform channel estimation using a received reference signal transmitted from a plurality of transmitting antennas, said reference signal being substantially located into two non-consecutive OFDM symbols of a current transmission time interval for each transmit antenna, said transmission time interval comprising of more than two OFDM symbols and a power level of said reference signal is divided into said non-consecutive OFDM symbols in said transmission time interval, wherein a first portion of a plurality of pilot symbols of at least one OFDM symbol is near a beginning of the transmission time interval and a second portion of said plurality of pilot symbols of at least one other OFDM symbol is near a middle of said transmission time interval, wherein a power level of said plurality of pilot symbols has been divided into said two OFDM symbols in said transmission time interval, said apparatus comprising: a receiver adapted to using the first of the two OFDM symbols carrying reference signals in a succeeding transmission time interval in addition to the reference signals in a current transmission time interval and a preceding transmission time interval.
+
+
+
+3. The apparatus of claim 2, wherein said input signal and plurality of data symbols are comprised of sub-sets, each sub-set intended for a unique receiver.
+
+
+
+4. An apparatus using information for channel estimation in an orthogonal frequency division multiplexing OFDM system, said information in the form of a pilot structure with a transmission time interval of seven OFDM symbols, said pilot structure comprising a plurality of pilot signals from at least one transmitting antenna located in a first OFDM symbol and fifth OFDM symbol of said transmission time interval, said apparatus comprising: at least two transmit antennas and wherein said plurality of pilot signals from any antenna are located in said first OFDM symbol and said fifth OFDM symbol or a second OFDM symbol and a sixth OFDM symbol of said transmission time interval.
+
+
+
+5. A method for receiving a pilot structure in an orthogonal frequency division multiplexing (OFDM) communication system having a transmitter having a plurality of antennas, said method comprising: receiving a frame composed with a time domain and a frequency domain, wherein said frame has a transmission time interval in the time domain and occupies a bandwidth in said frequency domain, said transmission time interval comprising of more than two orthogonal frequency division multiplexing symbols, wherein said transmission time interval comprises of seven orthogonal frequency division multiplexing symbols; and receiving a pilot signal, having pilot power level, from a plurality of transmitting antenna into two orthogonal frequency division multiplexing symbols of said frame, wherein a plurality of pilot signals from all transmitting antennas have a plurality of same locations in said time domain and wherein at least one pilot signal from at least one transmitting antenna has been located in a first OFDM symbol and a fifth OFDM symbol of said transmission time interval and said power level of said pilot signal has been divided into said a first OFDM symbol and a fifth OFDM symbol in said transmission time interval, wherein said transmitter has at least two antennas and a pilot signal from a second antenna has been located in said first and fifth orthogonal frequency division multiplexing symbols of said frame such that said pilot power of said pilot signal from said second antenna is in said first and said fifth orthogonal frequency division multiplexing symbols of said transmission time interval.
+
+
+
+6. A method for receiving a pilot structure in an orthogonal frequency division multiplexing (OFDM) communication system having a transmitter having at least two antennas, said method comprising: receiving a frame composed with a time domain and a frequency domain, wherein said frame has a transmission time interval in the time domain and occupies a bandwidth in said frequency domain, said transmission time interval comprising of more than two orthogonal frequency division multiplexing symbols, wherein said transmission time interval comprises of seven orthogonal frequency division multiplexing symbols; and receiving a pilot signal, having a pilot power level, from a plurality of transmitting antenna into two orthogonal frequency division multiplexing symbols of said frame, wherein a plurality of pilot signals from all transmitting antennas have a plurality of same locations in said time domain and wherein at least one pilot signal from at least one transmitting antenna has been located in a first OFDM symbol and a fifth OFDM symbol of said transmission time interval and said power level of said pilot signal has been divided into said a first OFDM symbol and a fifth OFDM symbol in said transmission time interval, wherein a pilot signal from a second antenna has been located in a second and sixth orthogonal frequency division multiplexing symbols of said frame such that said pilot power of said pilot signal from said second antenna is in said second and said sixth orthogonal frequency division multiplexing symbols of the transmission time interval.
+
+
+
+7. A method for receiving a pilot structure in an orthogonal frequency division multiplexing (OFDM) communication system having a transmitter having at least four antennas, said method comprising: receiving a frame composed with a time domain and a frequency domain, wherein said frame has a transmission time interval in the time domain and occupies a bandwidth in said frequency domain, said transmission time interval comprising of more than two orthogonal frequency division multiplexing symbols, wherein said transmission time interval comprises of seven orthogonal frequency division multiplexing symbols; and receiving a pilot signal, having pilot power level, from a plurality of transmitting antenna into two orthogonal frequency division multiplexing symbols of said frame, wherein a plurality of pilot signals from all transmitting antennas have a plurality of same locations in said time domain, wherein a pilot signal from a third antenna has been located in a second and sixth orthogonal frequency division multiplexing symbols of said frame such that the pilot power of the pilot signal from said third antenna is in a second orthogonal frequency division multiplexing symbol and a sixth orthogonal frequency division multiplexing symbols of the transmission time interval; and further wherein said pilot signal from a fourth antenna has been located in a first orthogonal frequency division multiplexing symbol and a fifth orthogonal frequency division multiplexing symbols of said frame such that the pilot power of the pilot signal from the fourth antenna is in the first and fifth orthogonal frequency division multiplexing symbols of the transmission time interval.
+
+
+
+8. A method for receiving a pilot structure in an orthogonal frequency division multiplexing (OFDM) communication system having a transmitter having at least four antennas, said method comprising: receiving a frame composed with a time domain and a frequency domain, wherein said frame has a transmission time interval in the time domain and occupies a bandwidth in said frequency domain, said transmission time interval comprising of more than two orthogonal frequency division multiplexing symbols, wherein said transmission time interval comprises of seven orthogonal frequency division multiplexing symbols; and receiving a pilot signal, having pilot power level, from a plurality of transmitting antenna into two orthogonal frequency division multiplexing symbols of said frame, wherein a plurality of pilot signals from all transmitting antennas have a plurality of same locations in said time domain, wherein a pilot signal from a third antenna has been located in a first orthogonal frequency division multiplexing symbol and a fifth orthogonal frequency division multiplexing symbol of said frame such that the pilot power of the pilot signal from said third antenna is in said first and fifth orthogonal frequency division multiplexing symbols of the transmission time interval; and a pilot signal from a fourth antenna is located in a second orthogonal frequency division multiplexing symbol and a sixth orthogonal frequency division multiplexing symbols of said frame such that said pilot power of said pilot signal from said fourth antenna is in said second and sixth orthogonal frequency division multiplexing symbols of said transmission time interval.
+
+
+
+9. A method for receiving a pilot structure in an orthogonal frequency division multiplexing (OFDM) communication system having a transmitter having at least four antennas, said method comprising: receiving a frame composed with a time domain and a frequency domain, wherein said frame has a transmission time interval in the time domain and occupies a bandwidth in said frequency domain, said transmission time interval comprising of more than two orthogonal frequency division multiplexing symbols, wherein said transmission time interval comprises of seven orthogonal frequency division multiplexing symbols; and receiving a pilot signal, having pilot power level, from a plurality of transmitting antenna into two orthogonal frequency division multiplexing symbols of said frame, wherein a plurality of pilot signals from all transmitting antennas have a plurality of same locations in said time domain and wherein at least one pilot signal from at least one antenna has been located in a first OFDM symbol and a fifth OFDM symbol of said transmission time interval and said power level of said pilot signal has been divided into a first OFDM symbol and a fifth OFDM symbol in said transmission time interval, wherein a frequency location of a pilot signal from a third antenna is the same as the frequency location of a pilot signal from a first antenna and a frequency location of a pilot signal from a fourth antenna is the same as a frequency location of the pilot from a second antenna.
+
+
+PatentNumber=7933244,What is claimed is:
+
+
+
+1. A cellular network using OFDMA channels for communication, the network comprising: a plurality of cells, each of said cells have a plurality of sectors; one or more groups of clusters of subcarriers, wherein at least one subcarrier is partitioned into each of said clusters; a base station in each of the plurality of cells, wherein each base station allocates said one or more groups of clusters of subcarriers to one or more subscribers in at least one of said sectors, wherein said allocation is based on priority assigned to each group of said groups of clusters of subcarriers, said priority being based on the cell of the plurality of cells in which said each base station resides, where each group of clusters of subcarriers is assigned a different priority for use in different cells.
+
+
+
+2. The network defined in claim 1 wherein priority orders are designed to enable selective assignment of a cluster of subcarriers to avoid interference while reducing a probability of causing interference with existing assignments of one or more clusters of subcarriers.
+
+
+
+3. A method for minimizing inter-cell interference in a cellular network using OFDMA channels for communication, said method comprising: partitioning each of a plurality of cells into a plurality of sectors; partitioning subcarriers into a plurality of groups of one or more clusters of subcarriers; and allocating, at a base station, at least one group in said plurality of groups of one or more clusters of subcarriers to one or more subscribers in at least one of said sectors, said allocating being based on the location of the cell in which said base station is located with respect to other cells in said plurality of cells.
+
+
+
+4. The method of claim 3 wherein a first portion of said sectors is allocated a first portion of available clusters of subcarriers and a second portion of said sectors is allocated a second portion of available clusters of subcarriers in said plurality of groups of one or more clusters of subcarriers.
+
+
+
+5. The method of claim 4 wherein said first portion of said sectors is one half of said plurality of sectors.
+
+
+
+6. The method of claim 4 wherein said first portion of available clusters of subcarriers is one half of said available clusters.
+
+
+
+7. The method of claim 4 further comprising: assigning, at said base station, priority to each of said plurality of groups to be allocated as traffic load increases, wherein the priority is based on the interference the cell in which said base station is located causes to other cells in said plurality of cells and the interference said cell in which said base station is located receives from other cells in said plurality of cells.
+
+
+
+8. A cellular network using OFDMA channels for communication, said network comprising: a plurality of cells, each cell having a plurality of sectors; a plurality of groups of one or more clusters of subcarriers; and a base station in each of said plurality of cells, wherein said base station allocates at least one group in said plurality of groups of one or more clusters of subcarriers subscribers in at least one of said sectors, said allocating being based on a location of the cell in which said base station resides with respect to other cells in said plurality of cells.
+
+
+
+9. The network of claim 8 wherein said base station allocates a first portion of available clusters of subcarriers in said plurality of groups of one or more clusters of subcarriers to a first portion of said sectors and further allocates a second portion of available clusters of subcarriers in said plurality of groups of one or more clusters of subcarriers to a second portion of said sectors.
+
+
+
+10. The network of claim 9 wherein said first portion of said sectors is one half of said plurality of sectors.
+
+
+
+11. The network of claim 9 wherein said first portion of available clusters of subcarriers is one half of said available clusters.
+
+
+
+12. The network of claim 9 said base station prioritizes each of said plurality of groups in an order to be allocated as traffic load increases, wherein the priority is based on the interference caused by the cell in which said base station is located to other cells in said plurality of cells and the interference received from other cells in said plurality of cells by said cell in which said base station is located.
+
+
+PatentNumber=7944851,The invention claimed is:
+
+
+
+1. A method of packet communication in a multicarrier communications environment comprising: determining, by a transceiver, a packet, the packet including a first legacy header portion and a second header portion, the second header portion indicating the packet is a training packet, wherein the first legacy header portion includes a Rate field indicating a legacy data rate value and a Length field indicating a legacy number of data bytes, and wherein the legacy number of data bytes indicated in the legacy header portion is greater than zero, and transmitting, by the transceiver, the packet, wherein the packet is a training packet that does not include a data portion.
+
+
+
+2. The method of claim 1, wherein the training packet comprises signals that are predefined.
+
+
+
+3. The method of claim 1, wherein the training packet is used to measure effects of a communications channel.
+
+
+
+4. The method of claim 1, wherein the training packet is used to measure channel multipath.
+
+
+
+5. The method of claim 1, wherein the training packet is used to measure a signal to noise ratio.
+
+
+
+6. The method of claim 1, wherein the training packet is used to train receiver equalizers.
+
+
+
+7. The method of claim 1, wherein the training packet is used to determine at least one transmission parameter.
+
+
+
+8. The method of claim 1, wherein the Rate field and Length field are used to determine a duration of time.
+
+
+
+9. The method of claim 1, wherein the Rate field and Length field are used to set a Network Allocation Vector (NAV).
+
+
+
+10. The method of claim 1, wherein the Rate field and Length field are used to defer transmission for a period of time.
+
+
+
+11. The method of claim 1, wherein the Rate field and Length field are used to determine a duration of the packet.
+
+
+
+12. The method of claim 1, wherein the transceiver supports one or more of 802.11a, 802.11b and 802.11g.
+
+
+
+13. The method of claim 1, wherein the transceiver is one or more of a general purpose computer, a special purpose computer, a programmed microprocessor, a microcontroller and peripheral integrated circuit element(s), an ASIC, a digital signal processor, a hard-wired electronic or logic circuit and a programmable logic device.
+
+
+
+14. The method of claim 1, wherein the transceiver is an access point.
+
+
+
+15. A method of packet communication in a multicarrier communications environment comprising: receiving, by a transceiver, a packet including a first legacy header portion and a second header portion, the second header portion indicating the packet is a training packet, wherein the first legacy header portion includes a Rate field indicating a legacy data rate value and a Length field indicating a legacy number of data bytes, and wherein the legacy number of data bytes indicated in the legacy header portion is greater than zero, and decoding, by the transceiver, one or more of the first legacy header portion and the second header portion, wherein the packet is a training packet that does not include a data portion.
+
+
+
+16. The method of claim 15, wherein the training packet comprises signals that are predefined.
+
+
+
+17. The method of claim 15, wherein the training packet is used by a receiver to measure effects of a communications channel.
+
+
+
+18. The method of claim 15, wherein the training packet is used by the transceiver to measure channel multipath.
+
+
+
+19. The method of claim 15, wherein the training packet is used by the transceiver to measure a signal to noise ratio.
+
+
+
+20. The method of claim 15, wherein the training packet is used by the transceiver to train receiver equalizers.
+
+
+
+21. The method of claim 15, wherein the training packet is used to determine at least one transmission parameter.
+
+
+
+22. The method of claim 15, wherein the Rate field and Length field are used to determine a duration of time.
+
+
+
+23. The method of claim 15, wherein the Rate field and Length field are used to set a Network Allocation Vector (NAV).
+
+
+
+24. The method of claim 15, wherein the Rate field and Length field are used to defer transmission for a period of time.
+
+
+
+25. The method of claim 15, wherein the Rate field and Length field are used to determine a duration of the packet.
+
+
+
+26. The method of claim 15, wherein the transceiver supports one or more of 802.11a, 802.11b and 802.11g.
+
+
+
+27. The method of claim 15, wherein the transceiver is one or more of a general purpose computer, a special purpose computer, a programmed microprocessor, a microcontroller and peripheral integrated circuit element(s), an ASIC, a digital signal processor, a hard-wired electronic or logic circuit and a programmable logic device.
+
+
+
+28. The method of claim 15, wherein the transceiver is an access point.
+
+
+
+29. A system capable of communicating packets in a multicarrier communications environment comprising: a transceiver capable of determining a packet, the packet including a first legacy header portion and a second header portion, the second header portion indicating the packet is a training packet, wherein the first legacy header portion includes a Rate field indicating a legacy data rate value and a Length field indicating a legacy number of data bytes, and wherein the legacy number of data bytes indicated in the legacy header portion is greater than zero, and transmitting the packet, wherein the packet is a training packet that does not include a data portion.
+
+
+
+30. The system of claim 29, wherein the training packet comprises signals that are predefined.
+
+
+
+31. The system of claim 29, wherein the training packet is used to measure effects of a communications channel.
+
+
+
+32. The system of claim 29, wherein the training packet is used to measure channel multipath.
+
+
+
+33. The system of claim 29, wherein the training packet is used to measure a signal to noise ratio.
+
+
+
+34. The system of claim 29, wherein the training packet is used to train receiver equalizers.
+
+
+
+35. The system of claim 29, wherein the training packet is used to determine at least one transmission parameter.
+
+
+
+36. The system of claim 29, wherein the Rate field and Length field are used to determine a duration of time.
+
+
+
+37. The system of claim 29, wherein the Rate field and Length field are used to set a Network Allocation Vector (NAV).
+
+
+
+38. The system of claim 29, wherein the Rate field and Length field are used to defer transmission for a period of time.
+
+
+
+39. The system of claim 29, wherein the Rate field and Length field are used to determine a duration of the packet.
+
+
+
+40. The system of claim 29, wherein the transceiver supports one or more of 802.11a, 802.11b and 802.11g.
+
+
+
+41. The system of claim 29, wherein the transceiver is one or more of a general purpose computer, a special purpose computer, a programmed microprocessor, a microcontroller and peripheral integrated circuit element(s), an ASIC, a digital signal processor, a hard-wired electronic or logic circuit and a programmable logic device.
+
+
+
+42. The system of claim 29, wherein the transceiver is an access point.
+
+
+
+43. A system capable of communicating packets in a multicarrier communications environment comprising: a transceiver capable of receiving a packet including a first legacy header portion and a second header portion, the second header portion indicating the packet is a training packet, wherein the first legacy header portion includes a Rate field indicating a legacy data rate value and a Length field indicating a legacy number of data bytes, and wherein the legacy number of data bytes indicated in the legacy header portion is greater than zero, and decoding one or more of the first legacy header portion and the second header portion, wherein the packet is a training packet that does not include a data portion.
+
+
+
+44. The system of claim 43, wherein the training packet comprises signals that are predefined.
+
+
+
+45. The system of claim 43, wherein the training packet is used by a receiver to measure effects of a communications channel.
+
+
+
+46. The system of claim 43, wherein the training packet is used by the transceiver to measure channel multipath.
+
+
+
+47. The system of claim 43, wherein the training packet is used by the transceiver to measure signal to noise ratio.
+
+
+
+48. The system of claim 43, wherein the training packet is used by the transceiver to train receiver equalizers.
+
+
+
+49. The system of claim 43, wherein the training packet is used to determine at least one transmission parameter.
+
+
+
+50. The system of claim 43, wherein the Rate field and Length field are used to determine a duration of time.
+
+
+
+51. The system of claim 43, wherein the Rate field and Length field are used to set a Network Allocation Vector (NAV).
+
+
+
+52. The system of claim 43, wherein the Rate field and Length field are used to defer transmission for a period of time.
+
+
+
+53. The system of claim 43, wherein the Rate field and Length field are used to determine a duration of the packet.
+
+
+
+54. The system of claim 43, wherein the transceiver supports one or more of 802.11a, 802.11b and 802.11g.
+
+
+
+55. The system of claim 43, wherein the transceiver is one or more of a general purpose computer, a special purpose computer, a programmed microprocessor, a microcontroller and peripheral integrated circuit element(s), an ASIC, a digital signal processor, a hard-wired electronic or logic circuit and a programmable logic device.
+
+
+
+56. The system of claim 43, wherein the transceiver is an access point.
+
+
+PatentNumber=7952990,What is claimed is:
+
+
+
+1. A method, comprising: receiving, at a receiver, a signal across a channel, the signal indicative of a preamble and multiple data symbols; determining first channel estimate information of the channel based on the received preamble; using the first channel estimate information to demodulate a data symbol from the multiple data symbols as received; determining a constellation point based on the demodulated data symbol to produce a decoded data symbol; determining second channel estimate information based on the demodulated data symbol and the decoded data symbol; and using the second channel estimate information to demodulate an additional data symbol from the multiple data symbols as received.
+
+
+
+2. The method of claim 1, wherein determining the constellation point based on the demodulated data symbol comprises determining which constellation point is closest to the demodulated data symbol, wherein determining the first channel estimate information comprises determining the first channel estimate information based on the received preamble and a stored preamble, wherein determining the second channel estimate information comprises determining the second channel estimate information based on the first channel estimate information, the demodulated data symbol, and the decoded data symbol.
+
+
+
+3. The method of claim 1, wherein determining the first channel estimate information comprises using a Fourier transformed version of the received preamble.
+
+
+
+4. The method of claim 1, wherein determining the second channel estimate information comprises updating channel estimate information based on adaptive filtering of one or more estimated channel frequency responses corresponding to respective one or more subcarriers.
+
+
+
+5. The method of claim 4, wherein determining the second channel estimate information comprises determining a channel update based on: .function. ##EQU00009## where H.sub.k represents an estimated channel frequency response corresponding to a subcarrier k.
+
+
+
+6. The method of claim 4, wherein determining the second channel estimate information comprises determining a channel update based on: .times..mu..function..times..function..times..function..times..times..not- eq..times..mu..function..times..function..times..function..times..times. ##EQU00010## where Hk represents an estimated channel frequency response corresponding to a subcarrier k.
+
+
+
+7. The method of claim 1, wherein the preamble is indicative of a first group of excited subcarriers and a second group of non-excited subcarriers, wherein determining the first channel estimate information comprises: deriving channel estimates for the first group of excited subcarriers; and interpolating the derived channel estimates to determine channel estimates for the second group of non-excited subcarriers.
+
+
+
+8. The method of claim 7, wherein interpolating the channel estimates corresponding to the first group of excited subcarriers to derive channel estimates for the second group of non-excited subcarriers comprises linearly interpolating the derived channel estimates based on: .times..times..times. ##EQU00011## where H.sub.k represents an estimated channel frequency response corresponding to a subcarrier k.
+
+
+
+9. The method of claim 1, wherein the channel is associated with an orthogonal frequency division multiplexing (OFDM) system, wherein determining the first channel estimate information comprises determining multiple channel estimates that are associated with subcarriers of a OFDM symbol.
+
+
+
+10. The method of claim 9, wherein the signal comprises two preambles based on OFDM, the method comprising averaging the two preambles based on: .times..times..times..times..times. ##EQU00012## where p.sub.k represents a first received preamble sequence in a time domain and p.sub.k+N/2 represents a second received preamble sequence in the time domain.
+
+
+
+11. A communication device comprising: circuitry configured to receive a signal indicative of a preamble and multiple data symbols; circuitry configured to determine first channel estimate information of the channel based on the received preamble; circuitry configured to use the first channel estimate information to demodulate a data symbol from the multiple data symbols as received; circuitry configured to determine a constellation point based on the demodulated data symbol to produce a decoded data symbol; circuitry configured to determine second channel estimate information based on the demodulated data symbol and the decoded data symbol; and circuitry configured to use the second channel estimate information to demodulate an additional data symbol from the multiple data symbols as received.
+
+
+
+12. The communication device of claim 11, wherein the circuitry configured to determine the constellation point based on the demodulated data symbol comprises circuitry to determine which constellation point is closest to the demodulated data symbol, wherein the circuitry configured to determine the first channel estimate information comprises circuitry to use a Fourier transformed version of the received preamble.
+
+
+
+13. The communication device of claim 11, wherein the circuitry configured to determine the second channel estimate information comprises circuitry to update channel estimate information based on adaptive filtering of one or more estimated channel frequency responses corresponding to respective one or more subcarriers.
+
+
+
+14. The communication device of claim 13, wherein the circuitry configured to determine the second channel estimate information comprises circuitry to determine a channel update based on: .function. ##EQU00013## where H.sub.k represents an estimated channel frequency response corresponding to a subcarrier k.
+
+
+
+15. The communication device of claim 13, wherein the circuitry configured to determine the second channel estimate information comprises circuitry to determine a channel update based on: .times..mu..function..times..function..times..function..times..times..not- eq..times..mu..function..times..function..times..function..times..times. ##EQU00014## where H.sub.k represents an estimated channel frequency response corresponding to a subcarrier k.
+
+
+
+16. The communication device of claim 11, wherein the preamble is indicative of a first group of excited subcarriers and a second group of non-excited subcarriers, wherein the circuitry configured to determine the first channel estimate information comprises: circuitry to derive channel estimates for the first group of excited subcarriers; and circuitry to interpolate the derived channel estimates to determine channel estimates for the second group of non-excited subcarriers.
+
+
+
+17. The communication device of claim 16, wherein the circuitry configured to interpolate the channel estimates corresponding to the first group of excited subcarriers to derive channel estimates for the second group of non-excited subcarriers comprises circuitry to linearly interpolate the derived channel estimates based on: .times..times..times. ##EQU00015## where H.sub.k represents an estimated channel frequency response corresponding to a subcarrier k.
+
+
+
+18. The communication device of claim 11, wherein the channel is associated with an orthogonal frequency division multiplexing (OFDM) system, wherein the circuitry configured to determine the first channel estimate information comprises circuitry to determine multiple channel estimates that are associated with subcarriers of a OFDM symbol.
+
+
+
+19. The communication device of claim 18, wherein the signal comprises two preambles based on OFDM, the communication device comprising circuitry configured to average the two preambles based on: .times..times..times..times..times. ##EQU00016## where p.sub.k represents a first received preamble sequence in a time domain and p.sub.k+N/2 represents a second received preamble sequence in the time domain.
+
+
+
+20. The communication device of claim 12, wherein the circuitry configured to determine the first channel estimate information comprises circuitry to determine the first channel estimate information based on the received preamble and a stored preamble, wherein the circuitry configured to determine the second channel estimate information comprises circuitry to determine the second channel estimate information based on the first channel estimate information, the demodulated data symbol, and the decoded data symbol.
+
+
+PatentNumber=7961672,What is claimed is:
+
+
+
+1. A feedback generator in a user equipment for use in an OFDMA system, comprising: a CQI compression module configured to provide a compressed channel quality indicator (CQI) for the user equipment corresponding to at least one sub-broad where a sub-band is composed of at least one resource block, wherein the compressed CQI corresponds to a down-sampled CQI that provides a CQI value for each of a subset of sub-bands; and a transmit module coupled to the CQI compression module and configured to transmit the compressed CQI to a serving base station.
+
+
+
+2. The feedback generator as recited in claim 1 wherein the compressed CQI corresponds to a predistorted CQI that provides a reduction in quantization error after restoration of the compressed CQI at the serving base station.
+
+
+
+3. A feedback generator in a user equipment for use in an OFDMA system, comprising: a CQI compression module configured to provide a compressed channel quality indicator (CQI) for the user equipment corresponding to at least one sub-band where a sub-band is composed of at least one resource block, wherein the compressed CQI includes a base CQI for a representative one of a set of sub-bands and a differential CQI relative to the base CQI for a remainder of the set of sub-bands; and a transmit module coupled to the CQI compression module and configured to transmit the compressed CQI to a serving base station.
+
+
+
+4. A feedback generator in a user equipment for use in an OFDMA system, comprising: a CQI compression module configured to provide a compressed channel quality indicator (CQI) for the user equipment corresponding to at least one sub-band where a sub-band is composed of at least one resource block, wherein the compressed CQI includes a wideband CQI that provides a single representative CQI for a set of sub-bands and a differential CQI relative to the wideband CQI for each sub-band of the set of sub-bands; and a transmit module coupled to the CWI compression module and configured to transmit the compressed CQI to a serving base station.
+
+
+
+5. A feedback generator in a user equipment for use in an OFDMA system, comprising: a CQI compression module configured to provide a compressed channel quality indicator (CQI) for the user equipment corresponding to at least one sub-hand where a sub-band is composed of at least one resource block, wherein the compressed CQI includes a wideband CQI that provides a single representative CQI for a set of sub-bands and a single differential CQI relative to the wideband CQI for a selected subset of the set of sub-bands; and a transmit module coupled to the CQI compression module and configured to transmit the compressed CQI to a serving base station.
+
+
+
+6. The feedback generator as recited in claim 5 wherein the compressed CQI includes corresponding positions of the selected subset of the set of sub-bands.
+
+
+
+7. The feedback generator as recited in claim 5 wherein the selected subset of the set of sub-bands corresponds to a group of CQI sub-bands chosen by the user equipment from the set of sub-bands.
+
+
+
+8. The feedback generator as recited in claim 1 wherein the compressed CQI corresponds to a wavelet-based CQI that provides a wavelet based on orthogonalizing a basis vector for a mean and differential CQI.
+
+
+
+9. The feedback generator as recited in claim 1 wherein the compressed CQI corresponds to a hierarchical granularity refinement CQI that provides difference-based wavelet coefficients chosen in time for a recursively divided set of sub-bands.
+
+
+
+10. The feedback generator as recited in claim 1 wherein the compressed CQI corresponds to a codebook that consists of a plurality of CQI profiles across sub-bands.
+
+
+
+11. The feedback generator as recited in claim 1 wherein the compressed CQI corresponds to an index for a codebook element that is closest to an actual differential CQI vector.
+
+
+
+12. The feedback generator as recited in claim 1 wherein the compressed CQI corresponds to a basis function representing at least one sub-band CQI selected from a set of sub-band CQIs for an assigned transmission bandwidth.
+
+
+
+13. The feedback generator as recited in claim 1 wherein the compressed CQI corresponds to each of a set of compressed CQIs for each sub-band that is determined independently for each of a plurality of spatial transmission streams.
+
+
+
+14. The feedback generator as recited in claim 1 wherein the compressed CQI corresponds to a spatially differential CQI for each sub-band that is determined as a difference CQI between a referenced one of a plurality of spatial transmission streams and each remaining one of the plurality of spatial transmission streams.
+
+
+
+15. The feedback generator as recited in claim 1 wherein the compressed CQI corresponds to a joint difference CQI for each sub-band that is determined as a difference CQI between each of a plurality of spatial transmission streams and a wideband CQI across the plurality of spatial streams for a set of sub-bands.
+
+
+
+16. A method of operating a feedback generator in a user equipment for use in an OFDMA system, comprising: providing a compressed channel quality indicator (CQI) for a user equipment corresponding to at least one sub-broad where a sub-band is composed of at least one resource block, wherein the compressed CQI corresponds to a down-sampled CQI that provides a CQI value for each of a subset of sub-bands; and transmitting the compressed CQI to a serving base station.
+
+
+
+17. The method as recited in claim 16 wherein the compressed CQI corresponds to a predistorted CQI that provides a reduction in quantization error after restoration of the compressed CQI at the serving base station.
+
+
+
+18. A method of operating a feedback generator in a user equipment for use in an OFDMA system, comprising: providing a compressed channel quality indicator (CQI) for a user equipment corresponding to at least one sub-band where a sub-band is composed of at least one resource block wherein the compressed CQI includes a base CQI for a representative one of a set of sub-bands and a differential CQI relative to the base CQI for a remainder of the set of sub-bands; and transmitting the compressed CQI to a serving base station.
+
+
+
+19. The method as recited in claim 16 wherein the compressed CQI corresponds to a down-sampled CQI that provides a CQI value for each of a subset of sub-bands.
+
+
+
+20. A method of operating a feedback generator in a user equipment for use in an OFDMA system, comprising: providing a compressed channel quality indicator (CQI) for a user equipment corresponding to at least one sub-band where a sub-band is composed of at least one resource block, wherein the compressed CQI includes a wideband CQI that provides a single representative CQI for a set of sub-bands and a differential CQI relative to the wideband CQI for each sub-band of the set of sub-bands; and transmitting the compressed CQI to a serving base station.
+
+
+
+21. A method of operating a feedback generator in a user equipment for use in an OFDMA system, comprising: providing a compressed channel quality indicator (CQI) for a user equipment corresponding to at least one sub-band where a sub-band is composed of at least one resource block, wherein the compressed CQI includes a wideband CQI that provides a single representative CQI for a set of sub-bands and a single differential CQI relative to the wideband CQI for a selected subset of the set of sub-bands; and transmitting the compressed CQI to a serving base station.
+
+
+
+22. The method as recited in claim 21 wherein the compressed CQI also includes corresponding positions of the selected subset of the set of sub-bands.
+
+
+
+23. The method as recited in claim 21 wherein the selected subset of the set of sub-bands corresponds to a group of best CQI sub-bands chosen from the set of sub-bands.
+
+
+
+24. The method as recited in claim 16 wherein the compressed CQI corresponds to a wavelet-based CQI that provides a wavelet based on orthogonalizing a basis vector for a mean and differential CQI.
+
+
+
+25. The method as recited in claim 16 wherein the compressed CQI corresponds to a hierarchical granularity refinement CQI that provides difference-based wavelet coefficients chosen in time for a recursively divided set of sub-bands.
+
+
+
+26. The method as recited in claim 16 wherein the compressed CQI corresponds to a codebook that consists of a plurality of CQI profiles across sub-bands.
+
+
+
+27. The method as recited in claim 16 wherein the compressed CQI corresponds to an index for a codebook element that is closest to an actual differential CQI vector.
+
+
+
+28. The method as recited in claim 16 wherein the compressed CQI corresponds to a basis function representing at least one sub-band CQI selected from a set of sub-band CQIs for an assigned transmission bandwidth.
+
+
+
+29. The method as recited in claim 16 wherein the compressed CQI corresponds to each of a set of compressed CQIs for each sub-band that is determined independently for each of a plurality of spatial transmission streams.
+
+
+
+30. The method as recited in claim 16 wherein the compressed CQI corresponds to a spatially differential CQI for each sub-band that is determined as a difference CQI between a referenced one of a plurality of spatial transmission streams and each remaining one of the plurality of spatial transmission streams.
+
+
+
+31. The method as recited in claim 16 wherein the compressed CQI corresponds to a joint difference CQI for each sub-band that is determined as a difference CQI between each of a plurality of spatial transmission streams and a wideband CQI across the plurality of spatial streams for a set of sub-bands.
+
+
+
+32. A feedback decoder in a base station for use in an OFDMA system, comprising: a receive module configured to receive a non-redundant compressed channel quality indicator (CQI) in the base station from user equipment corresponding to at least one sub-band where one sub-band is composed of at least one resource block; and a CQI restoration module coupled to the receive module and configured to provide a restored CQI from the compressed CQI for the at least one sub-band.
+
+
+
+33. The feedback decoder as recited in claim 32 wherein the restored CQI is derived from a predistorted CQI compression that provides a reduction in quantization error.
+
+
+
+34. The feedback decoder as recited in claim 32 wherein the restored CQI is derived from a wavelet-based CQI compression.
+
+
+
+35. A feedback decoder in a base station for use in an OFDMA system, comprising: a receive module configured to receive a compressed channel quality indicator (CQI) in the base station from user equipment corresponding to at least one sub-band where one sub-band is composed of at least one resource block; and a CQI restoration module coupled to the receive module and configured to provide a restored CQI from the compressed CQI for the at least one sub-band, wherein the restored CQI is derived from a wideband CQI that provides a single representative CQI for a set of sub-bands and a differential CQI relative to the wideband CQI for each sub-band of the set of sub-bands.
+
+
+
+36. A feedback decoder in a base station for use in an OFDMA system, comprising: a receive module configured to receive a compressed channel quality indicator (CQI) in the base station from user equipment corresponding to at least one sub-band where one sub-band is composed of at least one resource block; and a CQI restoration module coupled to the receive module and configured to provide a restored CQI from the compressed CQI for the at least one sub-band, wherein the compressed CQI includes a wideband CQI that provides a single representative CQI for a set of sub-bands and a single differential CQI relative to the wideband CQI for a selected subset of the set of sub-bands.
+
+
+
+37. The feedback decoder as recited in claim 36 wherein the compressed CQI includes corresponding positions of the selected subset of the set of sub-bands.
+
+
+
+38. The feedback decoder as recited in claim 36 wherein the selected subset of the set of sub-bands corresponds to a group of best CQI sub-bands chosen from the set of sub-bands.
+
+
+
+39. The feedback decoder as recited in claim 32 wherein the restored CQI is derived from a compressed CQI corresponding to a codebook that consists of a plurality of CQI profiles across sub-bands.
+
+
+
+40. The feedback decoder as recited in claim 32 wherein the restored CQI is derived from a selective sub-band CQI compression.
+
+
+
+41. The feedback decoder as recited in claim 32 wherein the restored CQI is derived from one selected from a group consisting of: a compressed CQI corresponding to a single transmission stream; and a compressed CQI corresponding to a plurality of spatial transmission streams.
+
+
+
+42. A method of operating a feedback decoder in a base station for use in an OFDMA system, comprising: receiving a non-redundant compressed channel quality indicator (CQI) in the base station from user equipment corresponding to at least one sub-band where one sub-band is composed of at least one resource block; and providing a restored CQI from the compressed CQI for the at least one sub-band.
+
+
+
+43. The method as recited in claim 42 wherein the restored CQI is derived from a predistorted CQI compression that provides a reduction in quantization error.
+
+
+
+44. The method as recited in claim 42 wherein the restored CQI is derived from a wavelet-based CQI compression.
+
+
+
+45. A method of operating a feedback decoder in a base station for use in an OFDMA system, comprising: receiving a compressed channel quality indicator (CQI) in the base station from user equipment corresponding to at least one sub-band where one sub-band is composed of at least one resource block; and providing a restored CQI from the compressed CQI for the at least one sub-band wherein the restored CQI is derived from a wideband CQI that provides a single representative CQI for a set of sub-bands and a differential CQI relative to the wideband CQI for each sub-band of the set of sub-bands.
+
+
+
+46. A method of operating a feedback decoder in a base station for use in an OFDMA system, comprising: receiving a compressed channel quality indicator (CQI) in the base station from user equipment corresponding to at least one sub-band where one sub-band is composed of at least one resource block, wherein the compressed CQI includes a wideband CQI that provides a single representative CQI for a set of sub-bands and a single differential CQI relative to the wideband CQI for a selected subset of the set of sub-bands; and providing a restored CQI from the compressed CQI for the at least one sub-band.
+
+
+
+47. The method as recited in claim 46 wherein the compressed CQI includes corresponding positions of the selected subset of the set of sub-bands.
+
+
+
+48. The method as recited in claim 46 wherein the selected subset of the set of sub-hands corresponds to a group of best CQI sub-bands chosen from the set of sub-bands.
+
+
+
+49. The method as recited in claim 42 wherein the restored CQI is derived from a compressed CQI corresponding to a codebook that consists of a plurality of CQI profiles across sub-bands.
+
+
+
+50. The method as recited in claim 42 wherein the restored CQI is derived from a selective sub-band CQI compression.
+
+
+
+51. The method as recited in claim 42 wherein the restored CQI is derived from one selected from a group consisting of: a compressed CQI corresponding to a single transmission stream; and a compressed CQI corresponding to a plurality of spatial transmission streams.
+
+
+PatentNumber=7983172,What is claimed is:
+
+
+
+1. A method comprising: executing burst power measurements to measure interference levels occurring at stations in a cluster of cells in a wireless network; mapping the measured interference levels by building a first matrix including noise plus interference occurring at the stations; mapping scheduled transmissions at predetermined times by each relay station of the stations by building a second matrix; determining a noise plus interference impact upon each base station of the stations by each relay station of the stations by multiplying the first matrix by the second matrix; and generating a network schedule by a network management entity based on the determined noise plus interference impact.
+
+
+
+2. The method as in claim 1, wherein the network is an Institute of Electrical and Electronics Engineers (IEEE) 802.16 Orthogonal Frequency Division Multiple Access (OFDM) system.
+
+
+
+3. An apparatus comprising: means for executing burst power measurements to measure interference levels occurring at stations in a cluster of cells in a wireless network; means for mapping the measured interference levels by building a first matrix including noise plus interference occurring at the stations; means for mapping scheduled transmissions at predetermined times by each relay station of the stations by building a second matrix; means for determining a noise plus interference impact upon each base station of the stations by each relay station of the stations by multiplying the first matrix by the second matrix; and means for generating a network schedule by a network management entity based on the determined noise plus interference impact.
+
+
+
+4. The apparatus as in claim 3, wherein the network is an Institute of Electrical and Electronics Engineers (IEEE) 802.16 Orthogonal Frequency Division Multiple Access (OFDM) system.
+

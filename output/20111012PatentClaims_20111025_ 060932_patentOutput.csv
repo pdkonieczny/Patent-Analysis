@@ -1,0 +1,67 @@
+7634023,FIR,2
+7634023,FPGA,2
+7634023,ASIC,2
+7634023,OFDM,2
+7729281,NAV,2
+7729281,ASIC,4
+7783291,GPS,15
+7783291,CDMA,18
+7783291,OFDM,27
+7783291,TDMA,8
+7783291,MIMO,3
+7783291,SDR,3
+7783291,RFID,4
+7783291,GSM,2
+7805143,OFDM,16
+7805143,CDMA,19
+7805143,TDMA,27
+7805143,WLAN,1
+7805143,IEEE,1
+7805143,MIMO,2
+7805143,SDR,2
+7809330,RSSI,2
+7809330,SNR,2
+7809330,SINR,2
+7869397,OFDM,7
+7869397,MAC,12
+7869397,FFT,4
+7907508,EQU,3
+7916624,DFT,2
+7916624,IDFT,2
+7924699,DFT,4
+7924699,IDFT,4
+7924699,OFDM,4
+7924841,SNR,16
+7929416,OFDM,38
+7933244,OFDMA,3
+7944851,NAV,4
+7944851,ASIC,4
+7952990,EQU,8
+7952990,OFDM,6
+7961672,OFDMA,14
+7961672,CQI,181
+7961672,CWI,1
+7983172,IEEE,2
+7983172,OFDM,2
+
+FIR, finite impulse response
+FPGA, field programmable gate array
+ASIC, application specific integrated circuit
+OFDM, orthogonal frequency digitally multiplexed
+NAV, Network Allocation Vector
+GPS, Global Positioning System
+CDMA, Code Division Multiple Access
+TDMA, Time Division Multiple Access
+MIMO, Multiple Input Multiple Output
+SDR, Software Defined Radio
+RFID, received Radio Frequency Identification
+WLAN, Wireless Local Area Network
+RSSI, Received Signal Strength Indicator
+SNR, Signal Noise Ratio
+SINR, Signal Interference Noise Ratio
+MAC, medium access control
+FFT, Fast Fourier Transform
+DFT, discrete Fourier transform
+IDFT, inverse discrete Fourier transform
+CQI, channel quality indicator
+IEEE, Institute Electrical Electronics Engineers

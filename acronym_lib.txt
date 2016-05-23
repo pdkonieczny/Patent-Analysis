@@ -1,0 +1,137 @@
+ACI: adjacent channel interference
+AFE: Analog Front EndSAS
+API: Application Programmatic Interface
+ASIC: application specific integrated circuit
+ATM: asynchronous transfer mode
+AWGN: additive white Gaussian noise
+BAT: Bit Allocation Table
+BER: bit error rate
+BLAST: binary large asset stateless transfer
+BPF: Band Pass Filter
+BRA: Bit Rate Agile
+BSC: Base Station Controller
+BSS: between stations 10
+BST: Base Station Transceiver
+BTS: Station Transceiver Subsystem
+CAD: computer aided design
+CAM: content addressable memory
+CCI: channel correlation indicator
+CCTA: Canadian Cable Television Association
+CDF: cumulative distribution function
+CDMA: Code Division Multiple Access
+CINR: interference plus noise ration
+CMU: communication management unit
+CORBA: Each GPAE
+CQI: Channel Quality Indication
+CRC: cyclic redundancy code
+CSI: channel state information
+CSU: central site unit
+CTS: a clear send
+DCD: data communication device
+DECT: Digital European Cordless Telecommunication
+DFT: discrete Fourier transform
+DNA: Deoxyribose Nucleic Acid
+DOCSIS: Data Over Cable Service Interchange Specification
+DSP: digital signal processing
+EDGE: Enhanced Digital GSM Evolution
+EPROM: erasable programmable read only memory
+ETA: estimated time arrival
+FCC: Federal Communications Commission
+FDD: frequency division duplexing
+FDE: frequency domain equalization
+FDM: Frequency Division Multiplexing
+FDMA: Frequency Division Multiple Access
+FEC: forward error correction
+FFT: fast Fourier transform
+FIR: finite impulse response
+FITL: Fiber In The Loop
+FLP: Fast Link Pulse
+FOC: Fiber Optics Communication
+FPGA: field programmable gate array
+FTTB: Fiber To The Building
+FTTC: Fiber To The Curb
+FTTN: Fiber To The Neighbourhood
+FXO: foreign exchange office
+FXS: foreign exchange station
+GPRS: General Packet Radio Service
+GPS: Global Positioning System
+GSM: Global Mobile System
+GUI: graphical user interfaces
+HAF: hardware address filter
+HDR: Hybrid Defined Radio
+HDT: Host Digital Terminal
+HTML: hypertext mark up language
+IAPP: Inter Access Point Protocol
+IBSS: directly between stations 10
+ICI: inter cell interference
+ICIC: Inter Cell Interference Coordination
+IDFT: inverse discrete Fourier transform
+IEEE: Institute Electrical Electronics Engineers
+IETF: Internet Engineering Task Force
+IFFT: Inverse Fast Fourier Transform
+IFR: in interface repository
+IIOP: Internet inter ORB protocol
+ISI: inner symbol interference
+ITU: International Telecommunication Union
+JAR: in Java Archive
+JVM: Java Virtual Machine
+KTS: key telephone system
+LAN: local area network
+LCD: liquid crystal display
+LIU: line interface unit
+LMS: Least Mean Square
+LTE: Long Term Evolution
+MAC: Medium Access Control
+MCS: modulation coding scheme
+MES: Modulation Embodiment Selectable
+MFS: Modem Format Selectable
+MIB: management information base
+MIMO: Multiple Input Multiple Output
+MISO: Multiple Input Single Output
+MMSE: minimum mean squared error
+MOS: means opinion score
+MPDE: Multiple Position Determining Entity
+MPEG: Motion Picture Experts Group
+MRC: maximal ratio combining
+MRI: Magnetic Resonance Imaging
+MTBF: mean time between failures
+MVC: model view controller
+NAP: network access point
+NAV: network allocation vector
+NIC: network interface card
+NQM: non quadrature modulation
+OAM: operations administration maintenance
+OFDM: Orthogonal Frequency Digital Multiplexing
+OFDMA: Orthogonal Frequency Division Multiple Access
+OMG: Object Management Group
+ONU: optical network unit
+ORB: object request broker
+OSF: an OffSet Field
+PBX: private branch exchange
+PCM: pulse code modulation
+PCS: Physical Coding sublayer
+PFSC: a phone/fax server card
+PIFA: planar inverted F antenna
+PON: Passive Optical Network
+PSTN: public switched telephone network
+PUSI: Payload Unit Start Indicator
+RAM: Random Access Memory
+RDPG: reduced dependency program graph
+ROM: read only memory
+RPDG: reduced program dependency graphs
+RSVP: uses resource reservation protocol
+RTS: enable request send
+SAA: Service Adaptive Access
+SAR: called segmentation reassembly
+SAS: Service Application Software
+SNAP: sub network access protocol
+SNMP: standard network management protocol
+SRAM: static random access memory
+STB: set top box
+TDM: time division multiplexed
+TFTP: Trivial File Transfer Protocol
+URL: universal resource locator
+WAN: wide area network
+WFQ: weighted fair queuing
+WLAN: wireless local area network
+WPDL: Workflow Process Definition Language

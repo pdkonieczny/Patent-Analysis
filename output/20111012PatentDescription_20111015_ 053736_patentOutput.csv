@@ -1,0 +1,116 @@
+7634023,OFDM(10),ACI(3),FIR(22),ISI(2),FPGA(5),ASIC(5),FFT(1),FEC(2),TOLL(5),BPSK(1),QPSK(2),PSK(1),EQU(1),RMS(1),MAC(6)
+7656958,OFDM(16),ISI(2),FFT(1),IEEE(1),PSK(2),DSP(3),ASIC(2),MRC(1),MMSE(1)
+7729281,OFDM(4),IEEE(3),LAN(6),BPSC(1),BSS(1),IBSS(1),BAT(5),SNR(9),BER(4),ADSL(4),ITU(1),QAM(1),ISI(2),ICI(2),SIGNAL(23),NAV(9),BPSK(1),STA(17),RATE(14),LENGTH(14),CRC(1),DSL(1),XDSL(1),VDSL(1),ASIC(1),PLD(1),PLA(1),FPGA(1),PAL(1),VLSI(1),JAVA(1),RTM(1),CGI(1)
+7783291,PATENT(3),USPTO(13),CITED(1),TDOA(1),FDOA(1),MRI(5),NRZ(2),FMOD(2),TDMA(15),FDMA(4),CDMA(28),WCDMA(12),CSMA(5),FQPSK(2),FGMSK(1),FQAM(1),GSM(34),OFDN(1),GMSK(7),OFDM(14),BRA(15),MFS(16),ULTRA(4),AND(9),FOR(3),WIRED(2),HYBRID(2),SPREAD(1),GPP(3),FDD(1),EDGE(7),PCS(2),IEEE(12),MSM(4),PTR(1),ISBN(3),UMTS(2),RFID(12),EOEM(1),OEM(1),AMC(1),ACM(1),BPSK(1),BST(2),BWA(1),CCOR(1),DECT(5),DNA(5),EMI(1),FDM(2),QPSK(3),FOC(3),FSK(1),GFSK(1),GPS(6),GPRS(5),HDR(3),LAN(1),LINA(1),MES(3),MIMO(5),MISO(4),MMIMO(1),MSDR(3),NLA(1),NQM(3),QUAD(5),PDA(4),PDD(4),PDE(16),PTT(4),SDR(11),SIMO(4),STCS(1),TBD(1),TCS(1),TDM(1),UNB(1),URC(4),UWB(2),UWN(1),WAN(2),WLAN(10),WWW(1),WEB(3),FCC(1),PSAP(1),NEED(1),THIS(1),NAP(1),USB(1),NFC(1),VCR(1),BSC(10),BTS(14),WMAN(1),MLAN(1),MPDE(1),BPF(1)
+7804765,OFDM(4),IEEE(3),LAN(6),BPSC(1),BSS(1),IBSS(1),BAT(5),SNR(9),BER(4),ADSL(4),ITU(1),QAM(1),ISI(2),ICI(2),SIGNAL(23),NAV(9),BPSK(1),STA(17),RATE(14),LENGTH(14),CRC(1),DSL(1),XDSL(1),VDSL(1),ASIC(1),PLD(1),PLA(1),FPGA(1),PAL(1),VLSI(1),JAVA(1),RTM(1),CGI(1)
+7805143,CITED(1),TDOA(1),FDOA(1),MRI(5),NRZ(2),FMOD(2),TDMA(16),FDMA(4),CDMA(30),WCDMA(13),CSMA(5),FQPSK(2),FGMSK(1),FQAM(1),GSM(35),OFDN(1),GMSK(7),OFDM(14),PATENT(2),BRA(15),MFS(16),ULTRA(4),AND(9),FOR(3),WIRED(2),HYBRID(2),USPTO(10),SPREAD(1),GPP(3),FDD(1),EDGE(7),PCS(2),IEEE(12),MSM(4),PTR(1),ISBN(4),UMTS(2),RFID(12),EOEM(1),OEM(1),AMC(1),ACM(1),BPSK(1),BST(2),BWA(1),CCOR(1),DECT(5),DNA(5),EMI(1),FDM(2),QPSK(3),FOC(3),FSK(1),GFSK(1),GPS(6),GPRS(6),HDR(3),LAN(1),LINA(1),MES(3),MIMO(5),MISO(4),MMIMO(1),MSDR(3),NLA(1),NQM(3),QUAD(5),OFDMA(1),PDA(4),PDD(4),PDE(16),PTT(3),SDR(11),SIMO(4),STCS(1),TBD(1),TCS(1),TDM(1),UNB(1),URC(4),UWB(2),UWN(1),WAN(2),WLAN(10),WWW(1),WEB(3),FCC(1),PSAP(1),NEED(1),THIS(1),NAP(1),USB(1),NFC(1),VCR(1),BSC(10),BTS(14),WMAN(1),MLAN(1),MPDE(1),BPF(1)
+7809330,MIMO(7),RSSI(2),SNR(7),SINR(2),OFDM(13),EQU(9),SSI(17),CCI(16),MAC(2),IFFT(2)
+7869397,DCD(107),MAC(27),ALOHA(7),CSMA(8),AFIPS(2),DQRUMA(5),ACM(1),FDD(2),OFDM(17),CATV(1),CCTA(1),QAM(3),IFFT(2),FIR(2),FFT(6),SPATIO(1),FOR(1),IEEE(1),AIF(8),SYNC(8),INFO(20),HDR(2),PGBK(4),FEC(10),RID(4),CRC(1),ACK(6),AID(2),TID(6),DLTX(5),PTX(24),TXID(14),NUM(10),PWRC(2),DLY(2),FROM(1),BURST(2),USAGE(1),RSVD(1),XSYNC(4),XRA(13)
+7903537,OFDMA(30),OFDM(3),PHY(1),IEEE(4),GPP(1),LTE(1),RRM(1),ICI(22),SNR(7),SINR(7),ICIC(19),SDMA(15),MIMO(1),BSC(28),CSI(1),CDF(1)
+7907508,OFDMA(26),OFDM(3),PHY(1),IEEE(4),GPP(1),LTE(1),RRM(1),ICI(21),SNR(3),SINR(7),ICIC(18),SDMA(15),MIMO(1),BSC(26),CSI(4),EQU(3),CDF(1)
+7916624,FIELDT(1),OFDM(57),IDFT(8),IFFT(2),QPSK(4),PSK(1),QAM(1),DSP(5),EQU(20),DFT(9),SIGMA(2)
+7916625,OFDM(4),IEEE(3),LAN(6),BPSC(1),BSS(1),IBSS(1),BAT(5),SNR(9),BER(4),ADSL(4),ITU(1),QAM(1),ISI(2),ICI(2),SIGNAL(23),NAV(9),BPSK(1),STA(17),RATE(14),LENGTH(14),CRC(1),DSL(1),XDSL(1),VDSL(1),ASIC(1),PLD(1),PLA(1),FPGA(1),PAL(1),VLSI(1),JAVA(1),RTM(1),CGI(1)
+7924699,FIELDT(1),OFDM(57),IDFT(8),IFFT(2),QPSK(4),PSK(1),QAM(1),DSP(5),EQU(20),DFT(9),SIGMA(2)
+7924841,OFDM(4),IEEE(3),LAN(6),BPSC(1),BSS(1),IBSS(1),BAT(5),SNR(9),BER(4),ADSL(4),ITU(1),QAM(1),ISI(2),ICI(2),SIGNAL(23),NAV(9),BPSK(1),STA(17),RATE(14),LENGTH(14),CRC(1),DSL(1),XDSL(1),VDSL(1),ASIC(1),PLD(1),PLA(1),FPGA(1),PAL(1),VLSI(1),JAVA(1),RTM(1),CGI(1)
+7929416,OFDM(88),FDM(4),FFT(6),IFFT(8),ISI(8),FDE(1),FDMA(2),SINR(3),MIMO(2),OFDMA(2),CQI(4),MCS(3),TTI(38),TDM(3)
+7933244,OFDM(16),IEEE(4),COM(1),TDMA(1),OFDMA(13),FDMA(1),CATV(1),VTC(1),CDMA(1),SDMA(1),SINR(73),QPSK(7),QAM(3),ROM(3),RAM(2),EPROM(1),EEPROM(1),PSK(1),EQU(1)
+7944851,OFDM(4),IEEE(3),LAN(6),BPSC(1),BSS(1),IBSS(1),BAT(5),SNR(9),BER(4),ADSL(4),ITU(1),QAM(1),ISI(2),ICI(2),SIGNAL(23),NAV(9),BPSK(1),STA(17),RATE(14),LENGTH(14),CRC(1),DSL(1),XDSL(1),VDSL(1),ASIC(1),PLD(1),PLA(1),FPGA(1),PAL(1),VLSI(1),JAVA(1),RTM(1),CGI(1)
+7952990,OFDM(34),IEEE(19),IFFT(6),FFT(21),EQU(8),MIMO(2),MMSE(1),AWGN(1),SNR(2),LMS(3),QAM(2),SUI(1)
+7961672,FIELDT(1),OFDMA(13),SINR(8),CQI(315),MIMO(9),MCS(4),GPP(1),LTE(1),EQU(30),SIGMA(2)
+7983172,IEEE(8),OFDMA(9),CINR(5),FFT(6),PUSC(2),AMC(2),RSSI(1),INT(1),EQU(4),SCH(1),REUSE(4),FOR(1),USING(3),RELAY(1),LEVELS(2),LOAD(2),BASED(1),MMR(1),WITH(1)
+
+OFDM, Orthogonal Frequency Digital Multiplexing
+ACI, adjacent channel interference
+ISI, inner symbol interference
+FPGA, field programmable gate array
+ASIC, application specific integrated circuit
+FFT, fast Fourier transform
+FIR, finite impulse response
+PSK, Phase Shift Key
+DSP, digital signal processor
+MRC, maximal ratio combining
+MMSE, minimum mean squared error
+BSS, between stations 10
+IBSS, directly between stations 10
+BAT, Bit Allocation Table
+BER, bit error rate
+ICI, inter cell interference
+NAV, network allocation vector
+USPTO, United States Patent Trademark Office
+BRA, Bit Rate Agile
+MFS, Modem Format Selectable
+FDD, frequency division duplexing
+SDR, Software Defined Radio
+RFID, Radio Frequency Identification Devices
+FCC, Federal Communications Commission
+PSAP, Public Safety Answering Point
+PDD, Position determining devices
+PDE, position determining entities
+WLAN, wireless local area networks
+NAP, network access point
+WAN, wide area network
+FOC, Fiber Optics Communication
+MES, Modulation Embodiment Selectable
+NQM, non quadrature modulation
+URC, Universal Remote Control
+DNA, Deoxyribose Nucleic Acid
+PTT, having push talk
+PDA, Personal Digital Assistants
+GSM, Global Mobile System
+GPRS, General Packet Radio Service
+EDGE, Enhanced Digital GSM Evolution
+CDMA, Code Division Multiple Access
+TDMA, Time Division Multiple Access
+DECT, Digital European Cordless Telecommunication
+MRI, Magnetic Resonance Imaging
+BSC, Base Station Controller
+BTS, Station Transceiver Subsystem
+MSDR, (SDR), Multiple SDR
+HDR, Hybrid Defined Radio
+MIMO, Multiple Input Multiple Output
+SIMO, Single Input Multiple Output
+MISO, Multiple Input Single Output
+BST, Base Station Transceiver
+GPS, Global Positioning System
+MPDE, Multiple Position Determining Entity
+BPF, Band Pass Filter
+RSSI, Received Signal Strength Indicator
+SNR, Signal Noise Ratio
+SINR, Signal Interference Noise Ratio
+SSI, signal strength indicator
+CCI, channel correlation indicator
+MAC, Medium Access Control
+IFFT, Inverse Fast Fourier Transform
+CCTA, Canadian Cable Television Association
+DCD, data communication device
+SYNC, waveform during a Synchronization
+INFO, functions. The 32 Information
+CRC, cyclic redundancy check
+TID, bit temporary identification
+DLTX, by a downlink transmissions
+PTX, eight permission transmit
+FEC, A last field
+PHY, at physical layer
+OFDMA, Orthogonal Frequency Division Multiple Access
+LTE, Long Term Evolution
+RRM, radio resource management
+ICIC, Inter Cell Interference Coordination
+SDMA, Spatial Division Multiple Access
+CSI, channel state information
+CDF, cumulative distribution function
+IDFT, inverse discrete Fourier transform
+QAM, quadrature amplitude modulation
+DFT, discrete Fourier transform
+FDM, Frequency Division Multiplexing
+FDE, frequency domain equalization
+FDMA, Frequency Division Multiple Access
+CQI, Channel Quality Indication
+MCS, modulation coding scheme
+TTI, Transmission Time Interval
+TDM, Time Division Multiplexed
+QPSK, quadrature phase shift keying
+AWGN, additive white Gaussian noise
+LMS, Least Mean Square
+IEEE, Institute Electrical Electronics Engineers
+CINR, interference plus noise ration
+INT, example interference matrix

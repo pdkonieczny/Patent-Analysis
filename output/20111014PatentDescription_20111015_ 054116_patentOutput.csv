@@ -1,0 +1,107 @@
+5802043,ATM(6),SONET(17),LAN(2),STS(4),SDH(9),FIFO(1)
+5878228,WITH(1),CLIENT(1),UNIT(1),SIZE(1),RATE(1),BLAST(34),CPU(1),PDU(66),TFTP(3),UDP(6),TCP(4),FTP(1),XTP(1),ISO(1),ATM(1),ABR(1)
+6014707,BLAST(34),CPU(1),PDU(66),TFTP(3),UDP(6),TCP(4),FTP(1),XTP(1),ISO(1),ATM(1),ABR(1)
+6026375,MCPE(16),SPS(21),MLDS(9),PDA(2),GPS(4),ROM(1),PAS(14),PAA(15),SPAS(7),CSA(18),ETA(4)
+6037937,GUI(18),PDA(2),SMS(1),PIFA(1),GSM(8),VEGA(7),BOCK(7),ARM(1),LEAD(1),DSP(1),JVM(1),UART(2),LCD(5),RAM(3),ROM(4),UCB(1)
+6088225,EMC(2)
+6112015,UNIX(1),GUI(20),ISO(4),OSI(27),IEC(1),CCITT(2),ITU(4),CORE(1),ATM(3),ADM(3),LTE(1),FCOT(1),CNET(3),OUA(6),GNE(10),GNB(7),ANR(3),RST(3),ANRST(1),OOS(6),AUMA(1),AURST(1),MAANR(1),ACT(1),AINS(1),BUSY(1),COMB(1),DGN(1),FAF(1),FEPO(1),FLT(1),IDLE(1),INHIP(1),LPBK(1),MEA(1),MON(1),OSS(1),OVFL(1),PMI(1),PPS(1),PRI(1),PSE(1),PWR(1),RAR(1),RDLD(1),SDEE(1),SGEO(1),STBYC(1),STBYH(1),STBYI(1),SWDL(1),SWTCH(1),SWTI(1),SWUL(1),TRD(1),TRMB(1),TRMF(1),TRMT(1),UAS(1),UEQ(1),WRK(1)
+6115646,DCE(1),ORB(27),WPDL(2),COSA(3),WFM(2),IBM(1),RPC(1),NFS(1),SAP(3),GPAE(54),CORBA(60),CORBAS(2),IONA(2),IDL(11),GUI(11),IIOP(8),TCP(2),OMG(1),MVC(5),API(4),CPU(1),WWW(4),IOR(1),ILOG(3),CPIS(2),LAN(1),WAN(1),OODBMS(1),JAVA(1),AWT(1),IFR(4),AND(1),COMP(3),LDBLD(3)
+6192397,CSMA(1),ISO(3),IEEE(12),OSI(2),PCS(1),PMA(1),PMD(1),MAC(1),DSP(2),FLP(6)
+6198558,ONU(125),FITL(9),MHZ(4),FTTC(9),FTTN(1),FTTB(2),HDT(71),PON(23),SONET(1),DSP(97),ASIC(1),SAA(4),DMS(2),RDT(1),POTS(24),MTBF(1),LIU(58),OAM(11),ISDN(14),AFE(9),PCM(4),SAS(6),RAM(4),TDM(7),ONUS(1),PSTN(1),ATM(7),SAR(2),OUTPUT(1),INPUT(1),STS(1)
+6202208,FIELDT(1),JVM(73),RAM(1),CPU(2),ISBN(1),ADDR(14)
+6271835,QWERTY(5),RAM(1)
+6298057,WAN(32),PBX(19),FRAD(1),LAN(41),KTS(8),CAD(3),MOS(2),ITU(3),CODECS(1),FEC(22),ATM(1),PFSC(43),CSU(35),NIC(10),RAM(2),DVM(41),FXS(2),FXO(2),PCM(4),DSP(6),SRAM(1),EPROM(1),DTMF(1),SNMP(5),CMU(2),RSVP(6),IETF(1),WFQ(1),SYSTEM(1),FOR(1),AND(2),AURAL(1),ACELP(1)
+6310610,TOOL(1),FOR(1),USER(1),GUI(18),PDA(2),SMS(1),PIFA(1),GSM(8),VEGA(7),BOCK(7),ARM(1),LEAD(1),DSP(1),JVM(1),UART(2),LCD(5),RAM(3),ROM(4),UCBL(1)
+6340979,TOOL(1),FOR(1),USER(1),TOUCH(1),GUI(18),PDA(2),SMS(1),PIFA(1),GSM(8),VEGA(7),BOCK(7),ARM(1),LEAD(1),DSP(1),JVM(1),UART(2),LCD(5),RAM(3),ROM(4),UCB(1)
+6594822,BASIC(1),RPDG(47),INTEL(1),AMD(1),RAM(2),ROM(4),ELF(1),IEEE(1),COFF(1),RDPG(1),PAR(1)
+6631368,LAN(1),ASCII(2),GUI(3),URL(1)
+6633564,FEC(13),ATSC(1),TCP(1),DOCSIS(64),ATM(31),AAL(11),ITU(8),PUSI(39),OSF(17),ISO(10),MPEG(87),PSTN(1),STB(16),CRC(2)
+6691282,FILE(2),FOLDER(1),DEPTH(1),PARENT(1),CHILD(1),WORLD(5),AFRICA(1),ASIA(1),EUROPE(1),NORTH(6),SOUTH(1),BARRY(1),MILTON(1),OSHAWA(1),CANADA(8)
+7092934,URL(46),HTML(6),LYCOS(2),GURU(1)
+7127526,SNMP(2),MIB(5),FTP(1),QOS(4),VPN(1),CPU(12),TCP(1),RAM(1),ROM(1),API(13),JVM(4),JAR(27),URL(9),HTTP(2),ASIC(1),ARP(1)
+7308279,LAN(3),WLAN(7),IEEE(2),ROM(1),PDA(1),ATM(2),MAC(1),CAM(2),HAF(2),SNMP(1),RTM(1),TELNET(1)
+7339892,RTS(25),CTS(30),LAN(3),WLAN(2),IEEE(3),CSMA(3),PDA(2),ATM(2),MAC(1),CAM(2),HAF(2),SNMP(1),RTM(1),TELNET(1),WUS(1),IAPP(8),SNAP(1)
+
+BLAST, binary large asset stateless transfer
+TFTP, Trivial File Transfer Protocol
+GPS, Global Positioning System
+ETA, estimated time arrival
+GUI, graphical user interfaces
+PIFA, planar inverted F antenna
+JVM, Java Virtual Machine
+UART, messaging over an asynchronous
+LCD, liquid crystal display
+ORB, object request broker
+IIOP, Internet inter ORB protocol
+OMG, Object Management Group
+MVC, model view controller
+API, Application Programmatic Interface
+CORBA, Each GPAE
+IFR, in interface repository
+WPDL, Workflow Process Definition Language
+IEEE, Institute Electrical Electronics Engineers
+PCS, Physical Coding sublayer
+PMA, Medium Attachment sublayer
+PMD, Medium Dependent sublayer
+MAC, Medium Access Control
+DSP, digital signal processing
+FLP, Fast Link Pulse
+FITL, Fiber In The Loop
+FTTN, Fiber To The Neighbourhood
+FTTC, Fiber To The Curb
+FTTB, Fiber To The Building
+HDT, Host Digital Terminal
+PON, Passive Optical Network
+SONET, (PON), a Synchronous Optical Network
+SAA, Service Adaptive Access
+MTBF, mean time between failures
+ONU, optical network unit
+OAM, operations, administration maintenance
+AFE, Analog Front End
+PCM, pulse code modulation
+SAS, Service Application Software
+RAM, Random Access Memory
+TDM, time division multiplexed
+PSTN, public switched telephone network
+SAR, called segmentation reassembly
+WAN, wide area network
+PBX, private branch exchange
+LAN, local area network
+CAD, computer aided design
+MOS, means opinion score
+FEC, forward error correction
+ATM, asynchronous transfer mode
+KTS, key telephone system
+PFSC, a phone/fax server card
+CSU, central site unit
+NIC, network interface card
+FXS, foreign exchange station
+FXO, foreign exchange office
+SRAM, static random access memory
+EPROM, erasable programmable read only memory
+SNMP, standard network management protocol
+CMU, communication management unit
+RSVP, uses resource reservation protocol
+IETF, Internet Engineering Task Force
+WFQ, weighted fair queuing
+ITU, International Telecommunication Union
+RPDG, reduced program dependency graphs
+RDPG, reduced dependency program graph
+ROM, read only memory
+DOCSIS, Data Over Cable Service Interchange Specification
+PUSI, Payload Unit Start Indicator
+OSF, an OffSet Field
+MPEG, Motion Picture Experts Group
+STB, set top box
+CRC, cyclic redundancy code
+HTML, hypertext mark up language
+URL, universal resource locator
+MIB, management information base
+JAR, in Java Archive
+WLAN, wireless local area network
+CAM, content addressable memory
+HAF, hardware address filter
+RTS, enable request send
+CTS, a clear send
+IAPP, Inter Access Point Protocol
+SNAP, sub network access protocol
